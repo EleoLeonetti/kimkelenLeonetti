@@ -81,6 +81,22 @@ a{
     background-position: center;
     background-size: 190px 190px;
     background-repeat: no-repeat;
+    animation-name: rebotar1; 
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+@keyframes rebotar1{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-50px);
+        box-shadow: 0px 2px 2px 2px #106567;
+    }
+    51%{
+        box-shadow: 0px 2px 2px 2px #106567;
+    }
+
 }
 #dos{
     border: #e75217 solid 3px;
@@ -88,6 +104,23 @@ a{
     background-position: center;
     background-size: 250px 250px;
     background-repeat: no-repeat;
+
+    animation-name: rebotar2; 
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+@keyframes rebotar2{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        transform: translateY(-70px);
+        box-shadow: 0px 2px 2px 2px #e75217;
+    }
+    41%{
+        box-shadow: 0px 2px 2px 2px #e75217;
+    }
+
 }
 #tres{
     border: #0d8a2e solid 3px;
@@ -95,6 +128,23 @@ a{
     background-position: center;
     background-size: 200px 200px;
     background-repeat: no-repeat;
+
+    animation-name: rebotar3; 
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+@keyframes rebotar3{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        transform: translateY(-60px);
+        box-shadow: 0px 2px 2px 2px #0d8a2e;
+    }
+    41%{
+        box-shadow: 0px 2px 2px 2px #0d8a2e;
+    }
+
 }
 #cuatro{
     border: #e75217 solid 3px; 
@@ -102,6 +152,22 @@ a{
     background-position: center;
     background-size: 230px 230px;
     background-repeat: no-repeat; 
+    animation-name: rebotar4; 
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+@keyframes rebotar4{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-50px);
+        box-shadow: 0px 2px 2px 2px #e75217;
+    }
+    51%{
+        box-shadow: 0px 2px 2px 2px #e75217;
+    }
+
 }
 .circulo{
     height: 350px;
