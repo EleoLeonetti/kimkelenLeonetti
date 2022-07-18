@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Quicksand:wght@300;400;600;700&family=Titan+One&display=swap');
+
+/* font-family: 'Asap', sans-serif; 
+font-family: 'Quicksand', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/* ----------------------------------------------------HOME ---------------------------------------------*/
+.home{
+    display: grid;
+    grid-template-areas: "nav nav"
+                         "main main"
+                         "textom imagenm"
+                         "imagenj textoj"
+                         "manifesto manifesto"
+                         "footer footer";
+}
+.header{
+    grid-area: nav;
+    width: 100%;
+    background-color: #106567;
+}
+.navegacion ul{
+    list-style: none;
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+.navegacion ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f9fbf1;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 15px;
+}
+.presentacion{
+    grid-area: main;
+    height: auto;
+    width: 100%;
+    background-color: #fbdea7;   
+}
+.logog{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    justify-content: center;
+}
+.logop{
+    color: #106567;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;   
+}
+.homeProductos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-end;
+    padding-bottom: 6%;
+}
+.circuloproductos{
+    width: 250px;
+    height: 230px;
+    border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
+    background: #f7b333;
+    margin: 20px;
+    margin-top: 100px;
+}
+#uno{
+    border: #106567 solid 3px;
+    background-image: url(./images/ballena.png);
+    background-position: center;
+    background-size: 190px 190px;
+    background-repeat: no-repeat;
+}
+#dos{
+    border: #e75217 solid 3px;
+    background-image: url(./images/taruca.png);
+    background-position: center;
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+}
+#tres{
+    border: #0d8a2e solid 3px;
+    background-image: url(./images/yurumi.png);
+    background-position: center;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+}
+#cuatro{
+    border: #e75217 solid 3px; 
+    background-image: url(./images/aguara.png);
+    background-position: center;
+    background-size: 230px 230px;
+    background-repeat: no-repeat; 
+}
+.circulo{
+    height: 350px;
+    width:350px;
+    border-radius:350px;
+    margin: 20% auto 20% auto;
+}
+.titulosmj{
+    color: #f9fbf1;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+}
+.descripcion{
+    width: 550px;
+    font-family: 'Quicksand', sans-serif;
+    color: #f9fbf1;
+    font-size: 20px;
+    line-height: 30px;
+}
+.boton{
+    width: 130px;
+    height: 40px;
+    background-color: #f9fbf1;
+    padding: 5px 10px;
+    border: solid 2.5px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+}
+.mobiliario{
+    grid-area: textom;
+    width: 100%;
+    background-color: #14a095;
+}
+.mobiliarioimg{
+    grid-area: imagenm;
+    width: 100%;
+    background-color: #14a095;
+}
+.mobiliarioimg .circulo{
+    background-color: #81efe6;
+    background-image: url(./images/ballena.png);
+    background-position: center;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
+.mobiliariotexto{
+    margin: 30% 20%;
+}
+.mobiliario .boton{
+    color: #14a095;
+    border-color: #81efe6;
+}
+.mobiliario .boton:hover{
+    background-color: #14a095;
+    color: #f9fbf1;
+}
+.juegosimg{
+    grid-area: imagenj;
+    width: 100%;
+    background-color: #e75217;
+}
+.juegost{
+    grid-area: textoj;
+    width: 100%;
+    background-color: #e75217;
+}
+.juegost .boton{
+    color: #e75217;
+    border-color: #f5b59c;
+}
+.juegost .boton:hover{
+    background-color: #e75217;
+    color: #f9fbf1;
+    border-color: #f5b59c;
+}
+.juegostexto{
+    margin-top: 30%;
+    margin-right: 20%;
+}
+.juegosimg .circulo{
+    background-color: #f5b59c;
+    background-image: url(./images/rompecabezas.png);
+    background-position: center;
+    background-size: 350px 350px;
+    background-repeat: no-repeat;
+}
+.manifiesto{
+    grid-area: manifesto;
+    width: 100%;
+    background-color: #106567; 
+}
+.titulom3{
+    color: #f9fbf1;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+.titulom2{
+    color: #f9fbf1;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+.manifiestotexto{
+    width: 60%;
+    font-family: 'Quicksand', sans-serif;
+    color: #f9fbf1;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin: 3% 20% 1% 20%;
+}
+.manifiesto .boton{
+    width: 10%;
+    background-color: #106567;
+    color: #f9fbf1;
+    border-color: #f9fbf1;  
+    margin: 2% 45% 5% 45%; 
+}
+.manifiesto .boton:hover{
+    background-color: #f9fbf1;
+    color: #106567;
+}
+.footer{
+    grid-area: footer;
+    width: 100%;
+    background-color: #106567; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+#footer1{
+    width: 33%;
+}
+#footer2{
+    width: 33%;
+}
+#footer3{
+    width: 33%;
+}
+.titulof1{
+    color: #f9fbf1;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 25%;
+    margin-right: 0;
+    text-align: center;
+}
+.footer ::placeholder{
+    color: #f9fbf1;
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 5%;
+}
+#suscripcion{
+    height: 28px;
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 3%;
+    margin-left: 36%;
+    background-color: transparent;
+    border: 1px solid #f9fbf1;
+}
+#submitbtn{
+    height: 20px;
+    width: 20%;
+    margin-top: 3%;
+    margin-left: 36%;
+    border-radius: 5px;
+    border: 1px solid #f9fbf1;
+    background-color: transparent;
+    color: #f9fbf1;
+    cursor: pointer;
+}
+#footer2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#footer2 ul{
+    list-style: none;
+}
+#footer2 a{
+    color: #f9fbf1;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;    
+}
+.titulof3{
+    color: #f9fbf1;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 25%;
+}
+.redes i{
+    font-size: 36px;
+    color: #f9fbf1;
+    text-align: center;
+    padding-left: 7%;
+    padding-top: 3%;
+}
+.copyp{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #f9fbf1;
+    padding-top: 3%;
+}
+/* -------------------------------------------------- CONTACTO ---------------------------------------------*/
+#contacto{
+    height: 750px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fbdea7 ;
+}
+#contacto #logog{
+    margin-top: 0px;
+}
+#contacto h2{
+    text-transform: uppercase;
+    color: #f9fbf1;
+    font-size: 40px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 3px 3px 3px #e75217;
+}
+.formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.estiloform{
+    border: 3px solid #e75217;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+.estiloform:hover{
+    transform: scale(1.05);
+    transition: all 0.6s;
+}
+#mensaje{
+    height: 300px;
+    width: 60%;
+}
+#nombre{
+    height: 40px;
+    width: 29%;
+}
+#email{
+    height: 40px;
+    width: 30%;
+}
+#btnformulario{
+    height: 40px;
+    width: 60%;
+    background-color: #e75217;
+    color: #f9fbf1;
+    border: 2px solid #f9fbf1;
+    cursor: pointer;
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .home{
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "main"
+        "textom" 
+        "imagenm"
+        "textoj"
+        "imagenj" 
+        "manifesto"
+        "footer"
+    }
+    .navegacion ul li a{
+        font-size: 14px;
+        padding: 10px;
+    }
+    .header{
+        grid-area: nav;
+    }
+    .presentacion{
+        grid-area: main;
+    }
+    .homeProductos{
+        flex-wrap: wrap;
+    }
+    .circuloproductos{
+        width: 180px;
+        height: 160px;
+        margin: 5px;
+        margin-top: 1%;
+        padding-top: 0;
+    }
+    #uno{
+        background-size: 150px 150px;
+    }
+    #dos{
+        background-size: 190px 190px;
+    }
+    #tres{
+        background-size: 140px 140px;
+    }
+    #cuatro{
+        background-size: 170px 170px;
+    }
+    .titulosmj{
+        font-size: 50px;
+        text-align: center;
+    }
+    .descripcion{
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        padding: 10%;
+        padding-bottom: 5%;
+    }
+    .mobiliariotexto{
+        grid-area: textom;
+        margin: 5%;
+    }
+    .mobiliarioimg{
+        grid-area: imagenm;
+    }
+    .boton{
+        margin-top: 0%;
+        margin-left: 38%;
+    }
+    .juegostexto{
+        grid-area: textoj;
+        width: 100%;
+    }
+    .juegosimg{
+        grid-area: imagenj;
+    }
+    .manifiesto{
+        grid-area: manifesto;
+    }
+    .titulom3{
+        font-size: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .titulom2{
+        font-size: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .manifiestotexto{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .manifiesto .boton{
+        width: 25%;
+        margin-left: 38%;
+        margin-bottom: 10%;
+    }
+    .footer{
+        width: 100%;
+        padding: 30px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer1{
+        width: 100%;
+        margin-top: 10%;
+    }
+    #footer2{
+        width: 100%;
+    }
+    #footer3{
+        width: 100%;
+    }
+    .titulof1{
+        font-size: 18px;
+        margin: 0%;
+        text-align: center;
+    }
+    #suscripcion{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    #submitbtn{
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+    #footer2{
+        margin-top: 10%;
+    }
+    #footer2 a{
+        font-size: 18px;  
+    }
+    .titulof3{
+        font-size: 18px;
+        margin-left: 42%;
+        margin-right: 42%;
+        margin-bottom: 3%;
+    }
+    .redes i{
+        font-size: 25px;
+        padding: 0;
+        letter-spacing: 8px;
+        text-align: center;
+    }
+    #fb{
+        margin-left: 45%;
+    }
+    .copyp{
+        font-size: 16px;
+        text-align: center;
+    }
+}
