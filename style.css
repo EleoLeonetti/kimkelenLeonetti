@@ -1,34 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Quicksand:wght@300;400;600;700&family=Titan+One&display=swap");
-/* font-family: 'Asap', sans-serif; 
-font-family: 'Quicksand', sans-serif;*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 .navbar {
   background-color: #106567;
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
 }
-.home {
-  display: grid;
-  grid-template-areas:
-    "main main"
-    "textom imagenm"
-    "imagenj textoj"
-    "manifesto manifesto";
-}
 
-.presentacion {
-  grid-area: main;
-  height: auto;
-  width: 100%;
-  background-color: #fbdea7;
-}
 .logog {
   display: block;
   margin-left: auto;
@@ -36,29 +22,40 @@ a {
   margin-top: 2%;
   justify-content: center;
 }
-.logop {
+
+.home {
+  display: grid;
+  grid-template-areas: "main main" "textom imagenm" "imagenj textoj" "manifesto manifesto";
+}
+.home .presentacion {
+  grid-area: main;
+  height: auto;
+  width: 100%;
+  background-color: #fbdea7;
+}
+.home .presentacion p {
   color: #106567;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 30px;
   text-align: center;
 }
-.homeProductos {
+.home .homeProductos {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: flex-end;
   padding-bottom: 6%;
 }
-.circuloproductos {
+.home .homeProductos .circuloproductos {
   width: 250px;
   height: 230px;
-  border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
+  border-radius: 80% 70% 60% 60%/80% 70% 60% 60%;
   background: #f7b333;
   margin: 20px;
   margin-top: 100px;
 }
-#uno {
+.home .homeProductos #uno {
   border: #106567 solid 3px;
   background-image: url(./images/ballena.png);
   background-position: center;
@@ -80,13 +77,12 @@ a {
     box-shadow: 0px 2px 2px 2px #106567;
   }
 }
-#dos {
+.home .homeProductos #dos {
   border: #e75217 solid 3px;
   background-image: url(./images/taruca.png);
   background-position: center;
   background-size: 250px 250px;
   background-repeat: no-repeat;
-
   animation-name: rebotar2;
   animation-duration: 2s;
   animation-iteration-count: 2;
@@ -103,13 +99,12 @@ a {
     box-shadow: 0px 2px 2px 2px #e75217;
   }
 }
-#tres {
+.home .homeProductos #tres {
   border: #0d8a2e solid 3px;
   background-image: url(./images/yurumi.png);
   background-position: center;
   background-size: 200px 200px;
   background-repeat: no-repeat;
-
   animation-name: rebotar3;
   animation-duration: 2s;
   animation-iteration-count: 2;
@@ -126,7 +121,7 @@ a {
     box-shadow: 0px 2px 2px 2px #0d8a2e;
   }
 }
-#cuatro {
+.home .homeProductos #cuatro {
   border: #e75217 solid 3px;
   background-image: url(./images/aguara.png);
   background-position: center;
@@ -148,12 +143,14 @@ a {
     box-shadow: 0px 2px 2px 2px #e75217;
   }
 }
+
 .circulo {
   height: 350px;
   width: 350px;
   border-radius: 350px;
   margin: 20% auto 20% auto;
 }
+
 .titulosmj {
   color: #f9fbf1;
   text-transform: uppercase;
@@ -161,6 +158,7 @@ a {
   font-size: 70px;
   font-weight: bold;
 }
+
 .descripcion {
   width: 550px;
   font-family: "Quicksand", sans-serif;
@@ -168,6 +166,7 @@ a {
   font-size: 20px;
   line-height: 30px;
 }
+
 .boton {
   width: 130px;
   height: 40px;
@@ -183,11 +182,24 @@ a {
   text-align: center;
   margin-top: 15px;
 }
+
 .mobiliario {
   grid-area: textom;
   width: 100%;
   background-color: #14a095;
 }
+.mobiliario .mobiliariotexto {
+  margin: 30% 20%;
+}
+.mobiliario .boton {
+  color: #14a095;
+  border-color: #81efe6;
+}
+.mobiliario .boton:hover {
+  background-color: #14a095;
+  color: #f9fbf1;
+}
+
 .mobiliarioimg {
   grid-area: imagenm;
   width: 100%;
@@ -200,22 +212,20 @@ a {
   background-size: 300px 300px;
   background-repeat: no-repeat;
 }
-.mobiliariotexto {
-  margin: 30% 20%;
-}
-.mobiliario .boton {
-  color: #14a095;
-  border-color: #81efe6;
-}
-.mobiliario .boton:hover {
-  background-color: #14a095;
-  color: #f9fbf1;
-}
+
 .juegosimg {
   grid-area: imagenj;
   width: 100%;
   background-color: #e75217;
 }
+.juegosimg .circulo {
+  background-color: #f5b59c;
+  background-image: url(./images/rompecabezas.png);
+  background-position: center;
+  background-size: 350px 350px;
+  background-repeat: no-repeat;
+}
+
 .juegost {
   grid-area: textoj;
   width: 100%;
@@ -230,23 +240,17 @@ a {
   color: #f9fbf1;
   border-color: #f5b59c;
 }
-.juegostexto {
+.juegost .juegostexto {
   margin-top: 30%;
   margin-right: 20%;
 }
-.juegosimg .circulo {
-  background-color: #f5b59c;
-  background-image: url(./images/rompecabezas.png);
-  background-position: center;
-  background-size: 350px 350px;
-  background-repeat: no-repeat;
-}
+
 .manifiesto {
   grid-area: manifesto;
   width: 100%;
   background-color: #106567;
 }
-.titulom3 {
+.manifiesto h3 {
   color: #f9fbf1;
   text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
@@ -255,7 +259,7 @@ a {
   text-align: center;
   margin-top: 5%;
 }
-.titulom2 {
+.manifiesto h2 {
   color: #f9fbf1;
   text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
@@ -265,7 +269,7 @@ a {
   margin-top: 2%;
   margin-bottom: 0%;
 }
-.manifiestotexto {
+.manifiesto p {
   width: 60%;
   font-family: "Quicksand", sans-serif;
   color: #f9fbf1;
@@ -285,6 +289,7 @@ a {
   background-color: #f9fbf1;
   color: #106567;
 }
+
 .footer {
   width: 100%;
   background-color: #106567;
@@ -294,16 +299,10 @@ a {
   align-items: center;
   padding-top: 5%;
 }
-#footer1 {
+.footer #footer1 {
   width: 33%;
 }
-#footer2 {
-  width: 33%;
-}
-#footer3 {
-  width: 33%;
-}
-.titulof1 {
+.footer #footer1 .titulof1 {
   color: #f9fbf1;
   text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
@@ -313,12 +312,12 @@ a {
   margin-right: 0;
   text-align: center;
 }
-.footer ::placeholder {
+.footer #footer1 .footer ::placeholder {
   color: #f9fbf1;
   font-family: "Quicksand", sans-serif;
   padding-left: 5%;
 }
-#suscripcion {
+.footer #footer1 #suscripcion {
   height: 28px;
   width: 70%;
   border-radius: 5px;
@@ -327,7 +326,7 @@ a {
   background-color: transparent;
   border: 1px solid #f9fbf1;
 }
-#submitbtn {
+.footer #footer1 #submitbtn {
   height: 25px;
   width: 20%;
   margin-top: 3%;
@@ -338,21 +337,24 @@ a {
   color: #f9fbf1;
   cursor: pointer;
 }
-#footer2 {
+.footer #footer2 {
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
 }
-#footer2 ul {
+.footer #footer2 ul {
   list-style: none;
 }
-#footer2 a {
+.footer #footer2 ul a {
   color: #f9fbf1;
   font-size: 25px;
   font-weight: bold;
   font-family: "Quicksand", sans-serif;
 }
-.titulof3 {
+.footer #footer3 {
+  width: 33%;
+}
+.footer #footer3 .titulof3 {
   color: #f9fbf1;
   text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
@@ -360,14 +362,14 @@ a {
   font-weight: bold;
   margin-right: 25%;
 }
-.redes i {
+.footer #footer3 .redes i {
   font-size: 36px;
   color: #f9fbf1;
   text-align: center;
   padding-left: 7%;
   padding-top: 3%;
 }
-.copyp {
+.footer #footer3 .copyp {
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   color: #f9fbf1;
@@ -381,6 +383,7 @@ a {
   text-align: center;
   font-size: 70px;
 }
+
 .descripcionpages {
   color: #f9fbf1;
   font-family: "Quicksand", sans-serif;
@@ -390,26 +393,34 @@ a {
   margin: 3% 20% 0% 20%;
   padding-bottom: 5%;
 }
-.page-mobiliario .titulopages {
-  text-shadow: 3px 3px 3px #106567;
-}
-.page-mobiliario {
-  background-color: #14a095;
-}
+
 .logopages {
   width: 15%;
   padding-top: 2%;
   padding-bottom: 2%;
   margin-top: 0%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
-.muebles {
-  background-color: #14a095;
-  padding-bottom: 5%;
-}
+
 .card-title {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.page-mobiliario {
+  background-color: #14a095;
+}
+.page-mobiliario .titulopages {
+  text-shadow: 3px 3px 3px #106567;
+}
+
+.muebles {
+  background-color: #14a095;
+  padding-bottom: 5%;
 }
 .muebles .card-text {
   font-family: "Quicksand", sans-serif;
@@ -420,62 +431,56 @@ a {
 }
 .muebles .btn {
   background-color: #106567;
+  border: none;
 }
 .muebles .card {
   border: 3px solid #106567;
 }
 
-.page-juegos .titulopages {
-  text-shadow: 3px 3px 3px #c13f29;
-}
 .page-juegos {
   background-color: #e75217;
 }
-.logopages {
-  width: 15%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-top: 0%;
+.page-juegos .titulopages {
+  text-shadow: 3px 3px 3px #f5b59c;
 }
+
 .rompecabezas {
   background-color: #e75217;
   padding-bottom: 5%;
 }
-
 .rompecabezas .card-text {
   font-family: "Quicksand", sans-serif;
-  color: #c13f29;
+  color: #e75217;
 }
 .rompecabezas .card-title {
-  color: #c13f29;
+  color: #e75217;
 }
 .rompecabezas .btn {
-  background-color: #c13f29;
-  border: 1px solid #c13f29;
+  background-color: #e75217;
+  border: 1px solid #e75217;
 }
 .rompecabezas .card {
-  border: 3px solid #c13f29;
+  border: 3px solid #e75217;
 }
+
 .page-nosotros {
   background-color: #fbdea7;
 }
 .page-nosotros .titulopages {
   text-shadow: 3px 3px 3px #f7b333;
 }
-#contacto {
+
+.contacto {
   height: 750px;
   width: 100%;
   margin: 0px;
   padding: 0px;
   background-color: #fbdea7;
 }
-#contacto #logog {
-  margin-top: 0px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.contacto .logog {
+  margin-top: 0;
 }
-#contacto h2 {
+.contacto h2 {
   text-transform: uppercase;
   color: #f9fbf1;
   font-size: 40px;
@@ -484,36 +489,37 @@ a {
   text-align: center;
   text-shadow: 3px 3px 3px #e75217;
 }
+
 .formulario {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
 }
-.estiloform {
+.formulario .estiloform {
   border: 3px solid #e75217;
   border-radius: 5px;
   margin: 10px;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
 }
-.estiloform:hover {
+.formulario .estiloform:hover {
   transform: scale(1.05);
   transition: all 0.6s;
 }
-#mensaje {
+.formulario #mensaje {
   height: 300px;
   width: 60%;
 }
-#nombre {
+.formulario #nombre {
   height: 40px;
   width: 29%;
 }
-#email {
+.formulario #email {
   height: 40px;
   width: 30%;
 }
-#btnformulario {
+.formulario #btnformulario {
   height: 40px;
   width: 60%;
   background-color: #e75217;
@@ -521,17 +527,11 @@ a {
   border: 2px solid #f9fbf1;
   cursor: pointer;
 }
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .home {
     display: grid;
-    grid-template-areas:
-      "main"
-      "main"
-      "textom"
-      "imagenm"
-      "textoj"
-      "imagenj"
-      "manifesto";
+    grid-template-areas: "main" "main" "textom" "imagenm" "textoj" "imagenj" "manifesto";
   }
   .presentacion {
     grid-area: main;
@@ -681,3 +681,5 @@ a {
     font-size: 20px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
