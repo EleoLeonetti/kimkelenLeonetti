@@ -1,691 +1,662 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Quicksand:wght@300;400;600;700&family=Titan+One&display=swap");
 
-$fuente1 : 'Quicksand', sans-serif;
-$fuente2 : 'Asap', sans-serif;
+$fuente1: "Quicksand", sans-serif;
+$fuente2: "Asap", sans-serif;
 
-$colortxt : #f9fbf1;
-$azul : #106567;
-$azulclaro : #14a095;
-$celeste : #81efe6;
-$naranja : #e75217;
-$naranjaclaro : #f5b59c;
-$verde : #0d8a2e;
-$amarillo : #f7b333;
-$amarilloclaro : #fbdea7;
+$colortxt: #f9fbf1;
+$azul: #106567;
+$azulclaro: #14a095;
+$celeste: #81efe6;
+$rojo: #8f2d17;
+$naranja: #e75217;
+$naranjaclaro: #f5b59c;
+$verde: #0d8a2e;
+$amarillo: #f7b333;
+$amarilloclaro: #fbdea7;
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  a {
-    text-decoration: none;
-  }
-  .navbar{
-    background-color: $azul;
-    font-family: $fuente1;
-    text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.logog{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    justify-content: center;
+a {
+  text-decoration: none;
 }
-.home{
-    display: grid;
-    grid-template-areas: 
-                         "main main"
-                         "textom imagenm"
-                         "imagenj textoj"
-                         "manifesto manifesto";
-    .presentacion{
-        grid-area: main;
-        height: auto;
-        width: 100%;
-        background-color: $amarilloclaro;         
+.navbar {
+  background-color: $azul;
+  font-family: $fuente1;
+  text-transform: uppercase;
+}
+.logog {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  justify-content: center;
+}
+@mixin tamaños($height, $width, $background) {
+  height: $height;
+  width: $width;
+  background-color: $background;
+}
+@mixin fuentes($family, $size) {
+  font-family: $family;
+  font-size: $size;
+}
+.home {
+  display: grid;
+  grid-template-areas:
+    "main main"
+    "textom imagenm"
+    "imagenj textoj"
+    "manifesto manifesto";
+  .presentacion {
+    grid-area: main;
+    @include tamaños(auto, 100%, $amarilloclaro);
 
-        p{
-            color: $azul;
-            font-family: $fuente1;
-            font-weight: 500;
-            font-size: 30px;
-            text-align: center;   
-        }
-        }
-        .homeProductos{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-content: flex-end;
-            padding-bottom: 6%;
-
-            .circuloproductos{
-                width: 250px;
-                height: 230px;
-                border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
-                background: $amarillo;
-                margin: 20px;
-                margin-top: 100px;
-            }
-            #uno{
-                border: $azul solid 3px;
-                background-image: url(./images/ballena.png);
-                background-position: center;
-                background-size: 190px 190px;
-                background-repeat: no-repeat;
-                animation-name: rebotar1; 
-                animation-duration: 2s;
-                animation-iteration-count: 2;
-            }
-            @keyframes rebotar1{
-                0%{
-                    opacity: 0;
-                }
-                50%{
-                    transform: translateY(-50px);
-                    box-shadow: 0px 2px 2px 2px $azul;
-                }
-                51%{
-                    box-shadow: 0px 2px 2px 2px $azul;
-                }
-            
-            }
-            #dos{
-                border: $naranja solid 3px;
-                background-image: url(./images/taruca.png);
-                background-position: center;
-                background-size: 250px 250px;
-                background-repeat: no-repeat;
-            
-                animation-name: rebotar2; 
-                animation-duration: 2s;
-                animation-iteration-count: 2;
-            }
-            @keyframes rebotar2{
-                0%{
-                    opacity: 0;
-                }
-                40%{
-                    transform: translateY(-70px);
-                    box-shadow: 0px 2px 2px 2px $naranja;
-                }
-                41%{
-                    box-shadow: 0px 2px 2px 2px $naranja;
-                }
-            
-            }
-            #tres{
-                border: $verde solid 3px;
-                background-image: url(./images/yurumi.png);
-                background-position: center;
-                background-size: 200px 200px;
-                background-repeat: no-repeat;
-            
-                animation-name: rebotar3; 
-                animation-duration: 2s;
-                animation-iteration-count: 2;
-            }
-            @keyframes rebotar3{
-                0%{
-                    opacity: 0;
-                }
-                40%{
-                    transform: translateY(-60px);
-                    box-shadow: 0px 2px 2px 2px $verde;
-                }
-                41%{
-                    box-shadow: 0px 2px 2px 2px $verde;
-                }
-            
-            }
-            #cuatro{
-                border: $naranja solid 3px; 
-                background-image: url(./images/aguara.png);
-                background-position: center;
-                background-size: 230px 230px;
-                background-repeat: no-repeat; 
-                animation-name: rebotar4; 
-                animation-duration: 2s;
-                animation-iteration-count: 2;
-            }
-            @keyframes rebotar4{
-                0%{
-                    opacity: 0;
-                }
-                50%{
-                    transform: translateY(-50px);
-                    box-shadow: 0px 2px 2px 2px $naranja;
-                }
-                51%{
-                    box-shadow: 0px 2px 2px 2px $naranja;
-                }
-            
-            }
-        }
-}
-.circulo{
-    height: 350px;
-    width:350px;
-    border-radius:350px;
-    margin: 20% auto 20% auto;
-}
-.titulosmj{
-    color: $colortxt;
-    text-transform: uppercase;
-    font-family: $fuente1;
-    font-size: 70px;
-    font-weight: bold;
-}
-.descripcion{
-    width: 550px;
-    font-family: $fuente1;
-    color: $colortxt;
-    font-size: 20px;
-    line-height: 30px;
-}
-.boton{
-    width: 130px;
-    height: 40px;
-    background-color: $colortxt;
-    padding: 5px 10px;
-    border: solid 2.5px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-family: $fuente1;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 15px;
-}
-.mobiliario{
-    grid-area: textom;
-    width: 100%;
-    background-color: $azulclaro;
-    .mobiliariotexto{
-        margin: 30% 20%;
+    p {
+      color: $azul;
+      @include fuentes($fuente1, 30px);
+      font-weight: 500;
+      text-align: center;
     }
-    .boton{
-        color: $azulclaro;
-        border-color: $celeste;
-    }
-    .boton:hover{
-        background-color: $azulclaro;
-        color: $colortxt;
-    }
-}
-.mobiliarioimg{
-    grid-area: imagenm;
-    width: 100%;
-    background-color: $azulclaro;
-    .circulo{
-        background-color: $celeste;
-        background-image: url(./images/ballena.png);
-        background-position: center;
-        background-size: 300px 300px;
-        background-repeat: no-repeat;
-    }
-}
-.juegosimg{
-    grid-area: imagenj;
-    width: 100%;
-    background-color: $naranja;
-    .circulo{
-        background-color: $naranjaclaro;
-        background-image: url(./images/rompecabezas.png);
-        background-position: center;
-        background-size: 350px 350px;
-        background-repeat: no-repeat;
-    }
-}
-.juegost{
-    grid-area: textoj;
-    width: 100%;
-    background-color: $naranja;
-    .boton{
-        color: $naranja;
-        border-color: $naranjaclaro;
-    }
-    .boton:hover{
-        background-color: $naranja;
-        color: $colortxt;
-        border-color: $naranjaclaro;
-    }
-    .juegostexto{
-        margin-top: 30%;
-        margin-right: 20%;
-    }
-}
-.manifiesto{
-    grid-area: manifesto;
-    width: 100%;
-    background-color: $azul; 
-    h3{
-        color: $colortxt;
-        text-transform: uppercase;
-        font-family: $fuente1;
-        font-size: 40px;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 5%;
-    }
-    h2{
-        color: $colortxt;
-        text-transform: uppercase;
-        font-family: $fuente1;
-        font-size: 30px;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 2%;
-        margin-bottom: 0%;
-    }
-    p{
-        width: 60%;
-        font-family: $fuente1;
-        color: $colortxt;
-        font-size: 20px;
-        line-height: 30px;
-        text-align: center;
-        margin: 3% 20% 1% 20%;
-    }
-    .boton{
-        width: 10%;
-        background-color: $azul;
-        color: $colortxt;
-        border-color: $colortxt;  
-        margin: 2% 45% 5% 45%; 
-    }
-    .boton:hover{
-        background-color: $colortxt;
-        color: $azul;
-    }
-}
-.footer{
-    width: 100%;
-    background-color: $azul; 
+  }
+  .homeProductos {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding-top: 5%;
-    #footer1{
-        width: 33%;
-        .titulof1{
-            color: $colortxt;
-            text-transform: uppercase;
-            font-family: $fuente1;
-            font-size: 25px;
-            font-weight: bold;
-            margin-left: 25%;
-            margin-right: 0;
-            text-align: center;
-        }
-        .footer ::placeholder{
-            color: $colortxt;
-            font-family: $fuente1;
-            padding-left: 5%;
-        }
-        #suscripcion{
-            height: 28px;
-            width: 70%;
-            border-radius: 5px;
-            margin-top: 3%;
-            margin-left: 36%;
-            background-color: transparent;
-            border: 1px solid $colortxt;
-        }
-        #submitbtn{
-            height: 25px;
-            width: 20%;
-            margin-top: 3%;
-            margin-left: 36%;
-            border-radius: 5px;
-            border: 1px solid $colortxt;
-            background-color: transparent;
-            color: $colortxt;
-            cursor: pointer;
-        }
+    align-content: flex-end;
+    padding-bottom: 6%;
+
+    .circuloproductos {
+      @include tamaños(230px, 250px, $amarillo);
+      border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
+      margin: 20px;
+      margin-top: 100px;
     }
-    #footer2{
-        width: 100%;
-        text-align: center;
-        margin-bottom: 50px;
-        ul{
-            list-style: none;
-            a{
-                color: $colortxt;
-                font-size: 25px;
-                font-weight: bold;
-                font-family: $fuente1;    
-            }
-        }
+    $mapa: (
+      azul: url(./images/ballena.png),
+      rojo: url(./images/taruca.png),
+      verde: url(./images/yurumi.png),
+      naranja: url(./images/aguara.png),
+    );
+    @each $bordecolor, $imagenes in $mapa {
+      .circ-#{$bordecolor} {
+        background-image: $imagenes;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+      }
     }
-    #footer3{
-        width: 33%;
-        .titulof3{
-            color: $colortxt;
-            text-transform: uppercase;
-            font-family: $fuente1;
-            font-size: 25px;
-            font-weight: bold;
-            margin-right: 25%;
-        }
-        .redes i{
-            font-size: 36px;
-            color: $colortxt;
-            text-align: center;
-            padding-left: 7%;
-            padding-top: 3%;
-        }
-        .copyp{
-            font-family: $fuente1;
-            font-size: 16px;
-            color: $colortxt;
-            padding-top: 3%;
-        }
+    .circ-azul {
+      border: $azul solid 3px;
+      background-size: 190px 190px;
+      animation-name: rebotar1;
     }
+    @keyframes rebotar1 {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-50px);
+        box-shadow: 0px 2px 2px 2px $azul;
+      }
+      51% {
+        box-shadow: 0px 2px 2px 2px $azul;
+      }
+    }
+    .circ-rojo {
+      border: $naranja solid 3px;
+      background-size: 250px 250px;
+      animation-name: rebotar2;
+    }
+    @keyframes rebotar2 {
+      0% {
+        opacity: 0;
+      }
+      40% {
+        transform: translateY(-70px);
+        box-shadow: 0px 2px 2px 2px $naranja;
+      }
+      41% {
+        box-shadow: 0px 2px 2px 2px $naranja;
+      }
+    }
+    .circ-verde {
+      border: $verde solid 3px;
+      background-size: 200px 200px;
+      animation-name: rebotar3;
+    }
+    @keyframes rebotar3 {
+      0% {
+        opacity: 0;
+      }
+      40% {
+        transform: translateY(-60px);
+        box-shadow: 0px 2px 2px 2px $verde;
+      }
+      41% {
+        box-shadow: 0px 2px 2px 2px $verde;
+      }
+    }
+    .circ-naranja {
+      border: $naranja solid 3px;
+      background-size: 230px 230px;
+      animation-name: rebotar4;
+    }
+    @keyframes rebotar4 {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-50px);
+        box-shadow: 0px 2px 2px 2px $naranja;
+      }
+      51% {
+        box-shadow: 0px 2px 2px 2px $naranja;
+      }
+    }
+  }
 }
-.titulopages{
+.circulo {
+  height: 350px;
+  width: 350px;
+  border-radius: 350px;
+  margin: 20% auto 20% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.circulo--mobiliario {
+    @extend .circulo;
+    background-color: $celeste;
+    background-image: url(./images/ballena.png);
+    background-size: 300px 300px;
+  }
+  .circulo--juego {
+    @extend .circulo;
+    background-color: $naranjaclaro;
+    background-image: url(./images/rompecabezas.png);
+    background-size: 350px 350px;
+  }
+.titulosmj {
+  @include fuentes($fuente1, 70px);
+  color: $colortxt;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.descripcion {
+  width: 550px;
+  @include fuentes($fuente1, 20px);
+  color: $colortxt;
+  line-height: 30px;
+}
+.boton {
+  @include tamaños(40px, 130px, $colortxt);
+  @include fuentes($fuente1, 16px);
+  padding: 5px 10px;
+  border: solid 2.5px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+.mobiliario {
+  grid-area: textom;
+  width: 100%;
+  background-color: $azulclaro;
+  .mobiliariotexto {
+    margin: 30% 20%;
+  }
+  .boton {
+    color: $azulclaro;
+    border-color: $celeste;
+  }
+  .boton:hover {
+    background-color: $azulclaro;
     color: $colortxt;
-    font-family: $fuente1;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 70px;
+  }
 }
-.descripcionpages{
+.mobiliarioimg {
+  grid-area: imagenm;
+  width: 100%;
+  background-color: $azulclaro;
+
+}
+.juegosimg {
+  grid-area: imagenj;
+  width: 100%;
+  background-color: $naranja;
+
+}
+.juegost {
+  grid-area: textoj;
+  width: 100%;
+  background-color: $naranja;
+  .boton {
+    color: $naranja;
+    border-color: $naranjaclaro;
+  }
+  .boton:hover {
+    background-color: $naranja;
     color: $colortxt;
-    font-family: $fuente1;
-    text-align: justify;
-    font-size: 20px;
-    width: 60%;
-    margin: 3% 20% 0% 20%;
-    padding-bottom: 5%;   
+    border-color: $naranjaclaro;
+  }
+  .juegostexto {
+    margin-top: 30%;
+    margin-right: 20%;
+  }
 }
-.logopages{
-    width: 15%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 0%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-}
-.card-title{
-    font-family: $fuente1;
+.manifiesto {
+  grid-area: manifesto;
+  width: 100%;
+  background-color: $azul;
+  h3 {
+    @include fuentes($fuente1, 40px);
+    color: $colortxt;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+  }
+  h2 {
+    @include fuentes($fuente1, 30px);
+    color: $colortxt;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0%;
+  }
+  p {
+    @include fuentes($fuente1, 20px);
+    width: 60%;
+    color: $colortxt;
+    line-height: 30px;
+    text-align: center;
+    margin: 3% 20% 1% 20%;
+  }
+  .boton {
+    width: 10%;
+    background-color: $azul;
+    color: $colortxt;
+    border-color: $colortxt;
+    margin: 2% 45% 5% 45%;
+  }
+  .boton:hover {
+    background-color: $colortxt;
+    color: $azul;
+  }
 }
-.page-mobiliario{
-    background-color: $azulclaro; 
-    .titulopages{
-        text-shadow: 3px 3px 3px $azul;
+.footer {
+  width: 100%;
+  background-color: $azul;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  #footer1 {
+    width: 33%;
+    .titulof1 {
+      @include fuentes($fuente1, 25px);
+      color: $colortxt;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 25%;
+      margin-right: 0;
+      text-align: center;
     }
-}
-.muebles{
-    background-color: $azulclaro;
-    padding-bottom: 5%;
-    .card-text{
-        font-family: $fuente1;
-        color: $azul;
+    .footer ::placeholder {
+      color: $colortxt;
+      font-family: $fuente1;
+      padding-left: 5%;
     }
-    .card-title{
-        color: $azul;
+    #suscripcion {
+      @include tamaños(28px, 70%, transparent);
+      border-radius: 5px;
+      margin-top: 3%;
+      margin-left: 36%;
+      border: 1px solid $colortxt;
     }
-    .btn{
-        background-color: $azul;
-        border: none;
+    #submitbtn {
+      @include tamaños(25px, 20%, transparent);
+      margin-top: 3%;
+      margin-left: 36%;
+      border-radius: 5px;
+      border: 1px solid $colortxt;
+      color: $colortxt;
+      cursor: pointer;
     }
-    .card{
-        border: 3px solid $azul;
-    }
-}
-.page-juegos{
-    background-color: $naranja; 
-    .titulopages{
-        text-shadow: 3px 3px 3px $naranjaclaro;
-    }
-}
-.rompecabezas{
-    background-color: $naranja;
-    padding-bottom: 5%;
-    .card-text{
-        font-family: $fuente1;
-        color: $naranja;
-    }
-    .card-title{
-        color: $naranja;
-    }
-    .btn{
-        background-color: $naranja;
-        border: 1px solid $naranja;
-    }
-    .card{
-        border: 3px solid $naranja;
-    }
-}
-.page-nosotros{
-    background-color: $amarilloclaro;
-    .titulopages{
-        text-shadow: 3px 3px 3px $amarillo;
-    }
-}
-.contacto{
-    height: 750px;
+  }
+  #footer2 {
     width: 100%;
-    margin: 0px;
-    padding: 0px;
-    background-color: $amarilloclaro;
-    .logog{
-        margin-top: 0;
-    }
-    h2{
-        text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+    ul {
+      list-style: none;
+      a {
+        @include fuentes($fuente1, 25px);
         color: $colortxt;
-        font-size: 40px;
-        font-family: $fuente1;
-        padding: 15px;
-        text-align: center;
-        text-shadow: 3px 3px 3px $naranja;
+        font-weight: bold;
+      }
     }
+  }
+  #footer3 {
+    width: 33%;
+    .titulof3 {
+      @include fuentes($fuente1, 25px);
+      color: $colortxt;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-right: 25%;
+    }
+    .redes i {
+      font-size: 36px;
+      color: $colortxt;
+      text-align: center;
+      padding-left: 7%;
+      padding-top: 3%;
+    }
+    .copyp {
+      @include fuentes($fuente1, 16px);
+      color: $colortxt;
+      padding-top: 3%;
+    }
+  }
 }
-.formulario{
-    display: flex;
+.titulopages {
+  @include fuentes($fuente1, 70px);
+  color: $colortxt;
+  text-transform: uppercase;
+  text-align: center;
+}
+.descripcionpages {
+  @include fuentes($fuente1, 20px);
+  color: $colortxt;
+  text-align: justify;
+  width: 60%;
+  margin: 3% 20% 0% 20%;
+  padding-bottom: 5%;
+}
+.logopages {
+  width: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 0%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.card-title {
+  font-family: $fuente1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.page-mobiliario {
+  background-color: $azulclaro;
+  .titulopages {
+    text-shadow: 3px 3px 3px $azul;
+  }
+}
+.muebles {
+  background-color: $azulclaro;
+  padding-bottom: 5%;
+  .card-text {
+    font-family: $fuente1;
+    color: $azul;
+  }
+  .card-title {
+    color: $azul;
+  }
+  .btn {
+    background-color: $azul;
+    border: none;
+  }
+  .card {
+    border: 3px solid $azul;
+  }
+}
+.page-juegos {
+  background-color: $naranja;
+  .titulopages {
+    text-shadow: 3px 3px 3px $naranjaclaro;
+  }
+}
+.rompecabezas {
+  background-color: $naranja;
+  padding-bottom: 5%;
+  .card-text {
+    font-family: $fuente1;
+    color: $naranja;
+  }
+  .card-title {
+    color: $naranja;
+  }
+  .btn {
+    background-color: $naranja;
+    border: 1px solid $naranja;
+  }
+  .card {
+    border: 3px solid $naranja;
+  }
+}
+.page-nosotros {
+  background-color: $amarilloclaro;
+  .titulopages {
+    text-shadow: 3px 3px 3px $amarillo;
+  }
+}
+.contacto {
+  @include tamaños(750px, 100%, $amarilloclaro);
+  margin: 0px;
+  padding: 0px;
+  .logog {
+    margin-top: 0;
+  }
+  h2 {
+    @include fuentes($fuente1, 40px);
+    text-transform: uppercase;
+    color: $colortxt;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 3px 3px 3px $naranja;
+  }
+}
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  .estiloform {
+    @include fuentes($fuente1, 16px);
+    border: 3px solid $naranja;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .estiloform:hover {
+    transform: scale(1.05);
+    transition: all 0.6s;
+  }
+  #mensaje {
+    height: 300px;
+    width: 60%;
+  }
+  #nombre {
+    height: 40px;
+    width: 29%;
+  }
+  #email {
+    height: 40px;
+    width: 30%;
+  }
+  #btnformulario {
+    @include tamaños(40px, 60%, $naranja);
+    color: $colortxt;
+    border: 2px solid $colortxt;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .home {
+    display: grid;
+    grid-template-areas:
+      "main"
+      "main"
+      "textom"
+      "imagenm"
+      "textoj"
+      "imagenj"
+      "manifesto";
+  }
+  .presentacion {
+    grid-area: main;
+  }
+  .homeProductos {
     flex-wrap: wrap;
+  }
+  .circuloproductos {
+    width: 180px;
+    height: 160px;
+    margin: 5px;
+    margin-top: 1%;
+    padding-top: 0;
+  }
+  #uno {
+    background-size: 150px 150px;
+  }
+  #dos {
+    background-size: 190px 190px;
+  }
+  #tres {
+    background-size: 140px 140px;
+  }
+  #cuatro {
+    background-size: 170px 170px;
+  }
+  .titulosmj {
+    font-size: 50px;
+    text-align: center;
+  }
+  .descripcion {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10%;
+    padding-bottom: 5%;
+  }
+  .mobiliariotexto {
+    grid-area: textom;
+    margin: 5%;
+  }
+  .mobiliarioimg {
+    grid-area: imagenm;
+  }
+  .boton {
+    margin-top: 0%;
+    margin-left: 38%;
+  }
+  .juegostexto {
+    grid-area: textoj;
+    width: 100%;
+  }
+  .juegosimg {
+    grid-area: imagenj;
+  }
+  .manifiesto {
+    grid-area: manifesto;
+  }
+  .titulom3 {
+    font-size: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .titulom2 {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .manifiestotexto {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .manifiesto .boton {
+    width: 25%;
+    margin-left: 38%;
+    margin-bottom: 10%;
+  }
+  .descripcionpages {
+    font-size: 16px;
+  }
+  .footer {
+    width: 100%;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 40px;
-    .estiloform{
-        border: 3px solid $naranja;
-        border-radius: 5px;
-        margin: 10px;
-        font-family: $fuente1;
-        font-size: 16px;
-    }
-    .estiloform:hover{
-        transform: scale(1.05);
-        transition: all 0.6s;
-    }
-    #mensaje{
-        height: 300px;
-        width: 60%;
-    }
-    #nombre{
-        height: 40px;
-        width: 29%;
-    }
-    #email{
-        height: 40px;
-        width: 30%;
-    }
-    #btnformulario{
-        height: 40px;
-        width: 60%;
-        background-color: $naranja;
-        color: $colortxt;
-        border: 2px solid $colortxt;
-        cursor: pointer;
-    }
+    align-items: center;
+  }
+  #footer1 {
+    width: 100%;
+    margin-top: 10%;
+  }
+  #footer2 {
+    width: 100%;
+  }
+  #footer3 {
+    width: 100%;
+  }
+  .titulof1 {
+    font-size: 18px;
+    margin: 0%;
+    text-align: center;
+  }
+  #suscripcion {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  #submitbtn {
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+  #footer2 {
+    margin-top: 10%;
+  }
+  #footer2 a {
+    font-size: 18px;
+  }
+  .titulof3 {
+    font-size: 18px;
+    margin-left: 42%;
+    margin-right: 42%;
+    margin-bottom: 3%;
+  }
+  .redes i {
+    font-size: 25px;
+    padding: 0;
+    letter-spacing: 8px;
+    text-align: center;
+  }
+  #fb {
+    margin-left: 45%;
+  }
+  .copyp {
+    font-size: 16px;
+    text-align: center;
+  }
 }
-@media screen and (min-width: 320px) and (max-width: 768px){
-    .home{
-        display: grid;
-        grid-template-areas: 
-        "main"
-        "main"
-        "textom" 
-        "imagenm"
-        "textoj"
-        "imagenj" 
-        "manifesto"
-    }
-    .presentacion{
-        grid-area: main;
-    }
-    .homeProductos{
-        flex-wrap: wrap;
-    }
-    .circuloproductos{
-        width: 180px;
-        height: 160px;
-        margin: 5px;
-        margin-top: 1%;
-        padding-top: 0;
-    }
-    #uno{
-        background-size: 150px 150px;
-    }
-    #dos{
-        background-size: 190px 190px;
-    }
-    #tres{
-        background-size: 140px 140px;
-    }
-    #cuatro{
-        background-size: 170px 170px;
-    }
-    .titulosmj{
-        font-size: 50px;
-        text-align: center;
-    }
-    .descripcion{
-        width: 100%;
-        font-size: 20px;
-        text-align: center;
-        padding: 10%;
-        padding-bottom: 5%;
-    }
-    .mobiliariotexto{
-        grid-area: textom;
-        margin: 5%;
-    }
-    .mobiliarioimg{
-        grid-area: imagenm;
-    }
-    .boton{
-        margin-top: 0%;
-        margin-left: 38%;
-    }
-    .juegostexto{
-        grid-area: textoj;
-        width: 100%;
-    }
-    .juegosimg{
-        grid-area: imagenj;
-    }
-    .manifiesto{
-        grid-area: manifesto;
-    }
-    .titulom3{
-        font-size: 30px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    .titulom2{
-        font-size: 20px;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .manifiestotexto{
-        font-size: 18px;
-        line-height: 30px;
-    }
-    .manifiesto .boton{
-        width: 25%;
-        margin-left: 38%;
-        margin-bottom: 10%;
-    }
-    .descripcionpages{
-        font-size: 16px; 
-    }
-    .footer{
-        width: 100%;
-        padding: 30px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #footer1{
-        width: 100%;
-        margin-top: 10%;
-    }
-    #footer2{
-        width: 100%;
-    }
-    #footer3{
-        width: 100%;
-    }
-    .titulof1{
-        font-size: 18px;
-        margin: 0%;
-        text-align: center;
-    }
-    #suscripcion{
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-    #submitbtn{
-        width: 20%;
-        margin-left: 40%;
-        margin-right: 40%;
-    }
-    #footer2{
-        margin-top: 10%;
-    }
-    #footer2 a{
-        font-size: 18px;  
-    }
-    .titulof3{
-        font-size: 18px;
-        margin-left: 42%;
-        margin-right: 42%;
-        margin-bottom: 3%;
-    }
-    .redes i{
-        font-size: 25px;
-        padding: 0;
-        letter-spacing: 8px;
-        text-align: center;
-    }
-    #fb{
-        margin-left: 45%;
-    }
-    .copyp{
-        font-size: 16px;
-        text-align: center;
-    }
+@media screen and (min-width: 768px) and (max-width: 1326px) {
+  .titulopages {
+    font-size: 40px;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 1326px){
-    .titulopages{
-        font-size: 40px;
-    }
-}
-@media screen and (min-width: 320px) and (max-width: 768px){
-    .titulopages{
-        font-size: 20px;
-    }
-
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .titulopages {
+    font-size: 20px;
+  }
 }

@@ -36,8 +36,8 @@ a {
 .home .presentacion p {
   color: #106567;
   font-family: "Quicksand", sans-serif;
-  font-weight: 500;
   font-size: 30px;
+  font-weight: 500;
   text-align: center;
 }
 .home .homeProductos {
@@ -48,22 +48,45 @@ a {
   padding-bottom: 6%;
 }
 .home .homeProductos .circuloproductos {
-  width: 250px;
   height: 230px;
+  width: 250px;
+  background-color: #f7b333;
   border-radius: 80% 70% 60% 60%/80% 70% 60% 60%;
-  background: #f7b333;
   margin: 20px;
   margin-top: 100px;
 }
-.home .homeProductos #uno {
-  border: #106567 solid 3px;
+.home .homeProductos .circ-azul {
   background-image: url(./images/ballena.png);
   background-position: center;
-  background-size: 190px 190px;
   background-repeat: no-repeat;
-  animation-name: rebotar1;
   animation-duration: 2s;
   animation-iteration-count: 2;
+}
+.home .homeProductos .circ-rojo {
+  background-image: url(./images/taruca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.home .homeProductos .circ-verde {
+  background-image: url(./images/yurumi.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.home .homeProductos .circ-naranja {
+  background-image: url(./images/aguara.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.home .homeProductos .circ-azul {
+  border: #106567 solid 3px;
+  background-size: 190px 190px;
+  animation-name: rebotar1;
 }
 @keyframes rebotar1 {
   0% {
@@ -77,15 +100,10 @@ a {
     box-shadow: 0px 2px 2px 2px #106567;
   }
 }
-.home .homeProductos #dos {
+.home .homeProductos .circ-rojo {
   border: #e75217 solid 3px;
-  background-image: url(./images/taruca.png);
-  background-position: center;
   background-size: 250px 250px;
-  background-repeat: no-repeat;
   animation-name: rebotar2;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
 }
 @keyframes rebotar2 {
   0% {
@@ -99,15 +117,10 @@ a {
     box-shadow: 0px 2px 2px 2px #e75217;
   }
 }
-.home .homeProductos #tres {
+.home .homeProductos .circ-verde {
   border: #0d8a2e solid 3px;
-  background-image: url(./images/yurumi.png);
-  background-position: center;
   background-size: 200px 200px;
-  background-repeat: no-repeat;
   animation-name: rebotar3;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
 }
 @keyframes rebotar3 {
   0% {
@@ -121,15 +134,10 @@ a {
     box-shadow: 0px 2px 2px 2px #0d8a2e;
   }
 }
-.home .homeProductos #cuatro {
+.home .homeProductos .circ-naranja {
   border: #e75217 solid 3px;
-  background-image: url(./images/aguara.png);
-  background-position: center;
   background-size: 230px 230px;
-  background-repeat: no-repeat;
   animation-name: rebotar4;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
 }
 @keyframes rebotar4 {
   0% {
@@ -144,40 +152,54 @@ a {
   }
 }
 
-.circulo {
+.circulo, .circulo--juego, .circulo--mobiliario {
   height: 350px;
   width: 350px;
   border-radius: 350px;
   margin: 20% auto 20% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.circulo--mobiliario {
+  background-color: #81efe6;
+  background-image: url(./images/ballena.png);
+  background-size: 300px 300px;
+}
+
+.circulo--juego {
+  background-color: #f5b59c;
+  background-image: url(./images/rompecabezas.png);
+  background-size: 350px 350px;
 }
 
 .titulosmj {
-  color: #f9fbf1;
-  text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
   font-size: 70px;
+  color: #f9fbf1;
+  text-transform: uppercase;
   font-weight: bold;
 }
 
 .descripcion {
   width: 550px;
   font-family: "Quicksand", sans-serif;
-  color: #f9fbf1;
   font-size: 20px;
+  color: #f9fbf1;
   line-height: 30px;
 }
 
 .boton {
-  width: 130px;
   height: 40px;
+  width: 130px;
   background-color: #f9fbf1;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
   padding: 5px 10px;
   border: solid 2.5px;
   border-radius: 15px;
   text-decoration: none;
-  font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 16px;
   text-transform: uppercase;
   text-align: center;
   margin-top: 15px;
@@ -205,25 +227,11 @@ a {
   width: 100%;
   background-color: #14a095;
 }
-.mobiliarioimg .circulo {
-  background-color: #81efe6;
-  background-image: url(./images/ballena.png);
-  background-position: center;
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
-}
 
 .juegosimg {
   grid-area: imagenj;
   width: 100%;
   background-color: #e75217;
-}
-.juegosimg .circulo {
-  background-color: #f5b59c;
-  background-image: url(./images/rompecabezas.png);
-  background-position: center;
-  background-size: 350px 350px;
-  background-repeat: no-repeat;
 }
 
 .juegost {
@@ -251,29 +259,29 @@ a {
   background-color: #106567;
 }
 .manifiesto h3 {
-  color: #f9fbf1;
-  text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
   font-size: 40px;
+  color: #f9fbf1;
+  text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   margin-top: 5%;
 }
 .manifiesto h2 {
-  color: #f9fbf1;
-  text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
+  color: #f9fbf1;
+  text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   margin-top: 2%;
   margin-bottom: 0%;
 }
 .manifiesto p {
-  width: 60%;
   font-family: "Quicksand", sans-serif;
-  color: #f9fbf1;
   font-size: 20px;
+  width: 60%;
+  color: #f9fbf1;
   line-height: 30px;
   text-align: center;
   margin: 3% 20% 1% 20%;
@@ -303,10 +311,10 @@ a {
   width: 33%;
 }
 .footer #footer1 .titulof1 {
-  color: #f9fbf1;
-  text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
   font-size: 25px;
+  color: #f9fbf1;
+  text-transform: uppercase;
   font-weight: bold;
   margin-left: 25%;
   margin-right: 0;
@@ -320,20 +328,20 @@ a {
 .footer #footer1 #suscripcion {
   height: 28px;
   width: 70%;
+  background-color: transparent;
   border-radius: 5px;
   margin-top: 3%;
   margin-left: 36%;
-  background-color: transparent;
   border: 1px solid #f9fbf1;
 }
 .footer #footer1 #submitbtn {
   height: 25px;
   width: 20%;
+  background-color: transparent;
   margin-top: 3%;
   margin-left: 36%;
   border-radius: 5px;
   border: 1px solid #f9fbf1;
-  background-color: transparent;
   color: #f9fbf1;
   cursor: pointer;
 }
@@ -346,19 +354,19 @@ a {
   list-style: none;
 }
 .footer #footer2 ul a {
-  color: #f9fbf1;
-  font-size: 25px;
-  font-weight: bold;
   font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+  color: #f9fbf1;
+  font-weight: bold;
 }
 .footer #footer3 {
   width: 33%;
 }
 .footer #footer3 .titulof3 {
-  color: #f9fbf1;
-  text-transform: uppercase;
   font-family: "Quicksand", sans-serif;
   font-size: 25px;
+  color: #f9fbf1;
+  text-transform: uppercase;
   font-weight: bold;
   margin-right: 25%;
 }
@@ -377,18 +385,18 @@ a {
 }
 
 .titulopages {
-  color: #f9fbf1;
   font-family: "Quicksand", sans-serif;
+  font-size: 70px;
+  color: #f9fbf1;
   text-transform: uppercase;
   text-align: center;
-  font-size: 70px;
 }
 
 .descripcionpages {
-  color: #f9fbf1;
   font-family: "Quicksand", sans-serif;
-  text-align: justify;
   font-size: 20px;
+  color: #f9fbf1;
+  text-align: justify;
   width: 60%;
   margin: 3% 20% 0% 20%;
   padding-bottom: 5%;
@@ -473,18 +481,18 @@ a {
 .contacto {
   height: 750px;
   width: 100%;
+  background-color: #fbdea7;
   margin: 0px;
   padding: 0px;
-  background-color: #fbdea7;
 }
 .contacto .logog {
   margin-top: 0;
 }
 .contacto h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
   text-transform: uppercase;
   color: #f9fbf1;
-  font-size: 40px;
-  font-family: "Quicksand", sans-serif;
   padding: 15px;
   text-align: center;
   text-shadow: 3px 3px 3px #e75217;
@@ -497,11 +505,11 @@ a {
   margin-top: 40px;
 }
 .formulario .estiloform {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
   border: 3px solid #e75217;
   border-radius: 5px;
   margin: 10px;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
 }
 .formulario .estiloform:hover {
   transform: scale(1.05);
