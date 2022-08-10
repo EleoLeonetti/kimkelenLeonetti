@@ -14,6 +14,29 @@ a {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
 }
+.navbar .btn {
+  background-color: #106567;
+  border: #f9fbf1 solid 1px;
+}
+.navbar .btn:hover {
+  background-color: #14a095;
+}
+
+.modal {
+  font-family: "Quicksand", sans-serif;
+  color: #106567;
+}
+.modal .btnmodal {
+  font-family: "Quicksand", sans-serif;
+  background-color: #106567;
+  border: none;
+}
+.modal .btnmodal:hover {
+  background-color: #14a095;
+}
+.modal .cardmodal {
+  border: #106567 solid 1px;
+}
 
 .logog {
   display: block;
@@ -446,22 +469,22 @@ a {
 }
 
 .page-juegos {
-  background-color: #e75217;
+  background-color: #8f2d17;
 }
 .page-juegos .titulopages {
-  text-shadow: 3px 3px 3px #f5b59c;
+  text-shadow: 3px 3px 3px #e75217;
 }
 
 .rompecabezas {
-  background-color: #e75217;
+  background-color: #8f2d17;
   padding-bottom: 5%;
 }
 .rompecabezas .card-text {
   font-family: "Quicksand", sans-serif;
-  color: #e75217;
+  color: #8f2d17;
 }
 .rompecabezas .card-title {
-  color: #e75217;
+  color: #8f2d17;
 }
 .rompecabezas .btn {
   background-color: #e75217;
@@ -476,6 +499,24 @@ a {
 }
 .page-nosotros .titulopages {
   text-shadow: 3px 3px 3px #f7b333;
+}
+
+.nospage {
+  background-color: #fbdea7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nospage .card {
+  border: #e75217 double;
+}
+.nospage .card-text {
+  font-family: "Quicksand", sans-serif;
+  color: #e75217;
+}
+.nospage .card-title {
+  font-family: "Quicksand", sans-serif;
+  color: #e75217;
 }
 
 .contacto {

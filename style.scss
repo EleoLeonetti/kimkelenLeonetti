@@ -26,7 +26,30 @@ a {
   background-color: $azul;
   font-family: $fuente1;
   text-transform: uppercase;
+  .btn{
+    background-color: $azul;
+    border: $colortxt solid 1px;
+  }
+  .btn:hover{
+    background-color: $azulclaro;
+  }
 }
+.modal{
+  font-family: $fuente1;
+  color: $azul;
+  .btnmodal{
+    font-family: $fuente1;
+    background-color: $azul;
+    border: none;
+  }
+  .btnmodal:hover{
+    background-color: $azulclaro;
+  }
+  .cardmodal{
+    border: $azul solid 1px;
+  }
+}
+
 .logog {
   display: block;
   margin-left: auto;
@@ -421,20 +444,20 @@ a {
   }
 }
 .page-juegos {
-  background-color: $naranja;
+  background-color: $rojo;
   .titulopages {
-    text-shadow: 3px 3px 3px $naranjaclaro;
+    text-shadow: 3px 3px 3px $naranja;
   }
 }
 .rompecabezas {
-  background-color: $naranja;
+  background-color: $rojo;
   padding-bottom: 5%;
   .card-text {
     font-family: $fuente1;
-    color: $naranja;
+    color: $rojo;
   }
   .card-title {
-    color: $naranja;
+    color: $rojo;
   }
   .btn {
     background-color: $naranja;
@@ -449,6 +472,24 @@ a {
   .titulopages {
     text-shadow: 3px 3px 3px $amarillo;
   }
+}
+.nospage{
+  background-color: $amarilloclaro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .card{
+    border: $naranja double;
+  }
+  .card-text{
+    font-family: $fuente1;
+    color: $naranja;
+  }
+  .card-title{
+    font-family: $fuente1;
+    color: $naranja;
+  }
+
 }
 .contacto {
   @include tamaños(750px, 100%, $amarilloclaro);
