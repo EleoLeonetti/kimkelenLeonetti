@@ -1,703 +1,748 @@
-@import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Quicksand:wght@300;400;600;700&family=Titan+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap');
 
-$fuente1: "Quicksand", sans-serif;
-$fuente2: "Asap", sans-serif;
+$fuente1: 'Quicksand', sans-serif;
+$fuente2: 'Raleway', sans-serif;
 
 $colortxt: #f9fbf1;
 $azul: #106567;
 $azulclaro: #14a095;
 $celeste: #81efe6;
-$rojo: #8f2d17;
 $naranja: #e75217;
 $naranjaclaro: #f5b59c;
-$verde: #0d8a2e;
 $amarillo: #f7b333;
 $amarilloclaro: #fbdea7;
+$verde: #0d8a2e;
 
+@mixin fuentes($family, $size) {
+    font-family: $family;
+    font-size: $size;
+  }
+@mixin basicos($height, $width, $background) {
+    height: $height;
+    width: $width;
+    background-color: $background;
+}
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-}
-.navbar {
-  background-color: $azul;
-  font-family: $fuente1;
-  text-transform: uppercase;
-  .btn{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.navbar{
     background-color: $azul;
-    border: $colortxt solid 1px;
-  }
-  .btn:hover{
-    background-color: $azulclaro;
-  }
+    font-family: $fuente1;
+    text-transform: uppercase;
+    .navbar-toggler{
+        color: $colortxt;
+    }
+    .btnModal{
+        background-color: $azul;
+        border: $colortxt solid 1px;
+        box-shadow: none;
+      }
+      .btnModal:hover{
+        background-color: $azulclaro;
+      }
 }
-.modal{
+.footer{
+    width: 100%;
+    background-color: $azul;
+    padding-bottom: 5%;
+    display: flex;
+}
+.hfooter{
+    @include fuentes($fuente1, 20px);
+    color: $colortxt;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.footerUno{
+    width: 33.33%;
+    text-align: center;
+    .redes{
+        color: $colortxt;
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+}
+.footerDos{
+    width: 33.33%;
+    text-align: center;
+    ul{
+        list-style: none;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+    a{
+        text-decoration: none;
+        color: $colortxt;
+        text-transform: capitalize;
+        @include fuentes($fuente1, 20px );
+        font-weight: bold;
+    }
+    p{
+        @include fuentes($fuente1, 16px);
+        color: $colortxt;
+    }
+}
+.footerTres{
+    width: 33.33%;
+    text-align: center;
+    color: $colortxt;
+
+    ::placeholder{
+        color: $colortxt;
+        font-family: $fuente1;
+        padding-left: 5%;
+    }
+    #suscripcion{
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid $colortxt;
+    }
+    .send{
+        background-color: transparent;
+        color: $colortxt;
+        border: none;
+        padding-left: 5px;
+    }
+    .send:hover{
+        color: $azulclaro;
+    }
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#exampleModalLabel{
   font-family: $fuente1;
   color: $azul;
-  .btnmodal{
-    font-family: $fuente1;
+}
+.btnmodal{
+  font-family: $fuente1;
     background-color: $azul;
     border: none;
-  }
-  .btnmodal:hover{
-    background-color: $azulclaro;
-  }
-  .cardmodal{
-    border: $azul solid 1px;
-  }
 }
-
-.logog {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-  justify-content: center;
+.btnmodal:hover{
+  background-color: $azulclaro;
 }
-@mixin tamaños($height, $width, $background) {
-  height: $height;
-  width: $width;
-  background-color: $background;
-}
-@mixin fuentes($family, $size) {
-  font-family: $family;
-  font-size: $size;
-}
-.home {
-  display: grid;
-  grid-template-areas:
-    "main main"
-    "textom imagenm"
-    "imagenj textoj"
-    "manifesto manifesto";
-  .presentacion {
-    grid-area: main;
-    @include tamaños(auto, 100%, $amarilloclaro);
-
-    p {
-      color: $azul;
-      @include fuentes($fuente1, 30px);
-      font-weight: 500;
-      text-align: center;
+.home{
+    @include basicos (auto, 100%, $amarilloclaro);
+    .slogan{
+        font-family: $fuente1;
+        color: $azul;
+        text-align: center;
+        margin-bottom: 0;
     }
-  }
-  .homeProductos {
+}
+.homeProductos{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: flex-end;
-    padding-bottom: 6%;
-
-    .circuloproductos {
-      @include tamaños(230px, 250px, $amarillo);
-      border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
-      margin: 20px;
-      margin-top: 100px;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    .circulos{
+        @include basicos (200px, 220px, $amarillo);
+        border-radius: 80% 70% 60% 60% / 80% 70% 60% 60%;
     }
     $mapa: (
-      azul: url(./images/ballena.png),
-      rojo: url(./images/taruca.png),
-      verde: url(./images/yurumi.png),
-      naranja: url(./images/aguara.png),
-    );
-    @each $bordecolor, $imagenes in $mapa {
-      .circ-#{$bordecolor} {
-        background-image: $imagenes;
-        background-position: center;
-        background-repeat: no-repeat;
-        animation-duration: 2s;
-        animation-iteration-count: 2;
-      }
+        azul: url(./img/ballena.png),
+        rojo: url(./img/taruca.png),
+        verde: url(./img/yurumi.png),
+        naranja: url(./img/aguara.png),
+      );
+      @each $bordecolor, $imagenes in $mapa {
+        .circ-#{$bordecolor} {
+          background-image: $imagenes;
+          background-position: center;
+          background-repeat: no-repeat;
+          animation-duration: 2s;
+          animation-iteration-count: 2;
+        }
     }
     .circ-azul {
-      border: $azul solid 3px;
-      background-size: 190px 190px;
-      animation-name: rebotar1;
+        border: $azul solid 2px;
+        background-size: 180px 180px;
+        animation-name: rebotar1;
+      }
+      @keyframes rebotar1 {
+        20% {
+          transform: translateY(-60px);
+          box-shadow: 0px 1px 1px 1px $azul;
+        }
+        21% {
+          box-shadow: 0px 1px 1px 1px $azul;
+        }
+        30% {
+          transform: translateY(-60px);
+          box-shadow: 0px 1px 1px 1px $azul;
+        }
+        31% {
+          box-shadow: 0px 1px 1px 1px $azul;
+        }
+      }
+      .circ-rojo {
+        border: $naranja solid 2px;
+        background-size: 230px 230px;
+        animation-name: rebotar2;
+      }
+      @keyframes rebotar2 {
+        10% {
+          transform: translateY(-50px);
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+        11% {
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+        20% {
+          transform: translateY(-50px);
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+        21% {
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+      }
+      .circ-verde {
+        border: $verde solid 2px;
+        background-size: 180px 180px;
+        animation-name: rebotar3;
+      }
+      @keyframes rebotar3 {
+        20% {
+          transform: translateY(-50px);
+          box-shadow: 0px 1px 1px 1px $verde;
+        }
+        21% {
+          box-shadow: 0px 1px 1px 1px $verde;
+        }
+        30% {
+          transform: translateY(-50px);
+          box-shadow: 0px 1px 1px 1px $verde;
+        }
+        31% {
+          box-shadow: 0px 1px 1px 1px $verde;
+        }
+      }
+      .circ-naranja {
+        border: $naranja solid 3px;
+        background-size: 200px 200px;
+        animation-name: rebotar4;
+      }
+      @keyframes rebotar4 {
+        10% {
+          transform: translateY(-60px);
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+        11% {
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+        20% {
+          transform: translateY(-60px);
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+        21% {
+          box-shadow: 0px 1px 1px 1px $naranja;
+        }
+      }
     }
-    @keyframes rebotar1 {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        transform: translateY(-50px);
-        box-shadow: 0px 2px 2px 2px $azul;
-      }
-      51% {
-        box-shadow: 0px 2px 2px 2px $azul;
-      }
-    }
-    .circ-rojo {
-      border: $naranja solid 3px;
-      background-size: 250px 250px;
-      animation-name: rebotar2;
-    }
-    @keyframes rebotar2 {
-      0% {
-        opacity: 0;
-      }
-      40% {
-        transform: translateY(-70px);
-        box-shadow: 0px 2px 2px 2px $naranja;
-      }
-      41% {
-        box-shadow: 0px 2px 2px 2px $naranja;
-      }
-    }
-    .circ-verde {
-      border: $verde solid 3px;
-      background-size: 200px 200px;
-      animation-name: rebotar3;
-    }
-    @keyframes rebotar3 {
-      0% {
-        opacity: 0;
-      }
-      40% {
-        transform: translateY(-60px);
-        box-shadow: 0px 2px 2px 2px $verde;
-      }
-      41% {
-        box-shadow: 0px 2px 2px 2px $verde;
-      }
-    }
-    .circ-naranja {
-      border: $naranja solid 3px;
-      background-size: 230px 230px;
-      animation-name: rebotar4;
-    }
-    @keyframes rebotar4 {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        transform: translateY(-50px);
-        box-shadow: 0px 2px 2px 2px $naranja;
-      }
-      51% {
-        box-shadow: 0px 2px 2px 2px $naranja;
-      }
-    }
-  }
-}
-.circulo {
+.circuloSecciones{
   height: 350px;
   width: 350px;
   border-radius: 350px;
-  margin: 20% auto 20% auto;
+  margin: 10% auto 10% auto;
   background-position: center;
   background-repeat: no-repeat;
 }
-.circulo--mobiliario {
-    @extend .circulo;
-    background-color: $celeste;
-    background-image: url(./images/ballena.png);
-    background-size: 300px 300px;
-  }
-  .circulo--juego {
-    @extend .circulo;
-    background-color: $naranjaclaro;
-    background-image: url(./images/rompecabezas.png);
-    background-size: 350px 350px;
-  }
-.titulosmj {
-  @include fuentes($fuente1, 70px);
-  color: $colortxt;
+.hmImagen{
+  width: 50%
+}
+.hmTexto{
+  width: 50%
+}
+.homeTitulos{
+  @include fuentes($fuente1, 60px );
   text-transform: uppercase;
   font-weight: bold;
+  color: $colortxt;
+  margin-top: 15%;
+  margin-left: 20%;
 }
-.descripcion {
-  width: 550px;
+.descripcion{
   @include fuentes($fuente1, 20px);
   color: $colortxt;
-  line-height: 30px;
+  margin-left: 20%;
 }
-.boton {
-  @include tamaños(40px, 130px, $colortxt);
+.btnDescripcion{
+  @include basicos(40px, 130px, $colortxt);
   @include fuentes($fuente1, 16px);
-  padding: 5px 10px;
-  border: solid 2.5px;
-  border-radius: 15px;
-  text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 15px;
+  border-radius: 15px;
+  border: 2px solid;
+  margin-left: 20%;
 }
-.mobiliario {
-  grid-area: textom;
-  width: 100%;
+.homeMobiliario{
   background-color: $azulclaro;
-  .mobiliariotexto {
-    margin: 30% 20%;
+  display: flex;
+    .btnDescripcion{
+      border-color: $celeste;
+      color: $azulclaro;
+    }
+    .btnDescripcion:hover{
+      background-color: $azulclaro;
+      color: $colortxt;
+    }
   }
-  .boton {
-    color: $azulclaro;
-    border-color: $celeste;
-  }
-  .boton:hover {
-    background-color: $azulclaro;
-    color: $colortxt;
-  }
-}
-.mobiliarioimg {
-  grid-area: imagenm;
-  width: 100%;
-  background-color: $azulclaro;
-
-}
-.juegosimg {
-  grid-area: imagenj;
-  width: 100%;
+    .circuloSecciones{
+      background-color: $celeste;
+      background-image: url(./img/ballena.png);
+      background-size: 300px 300px;
+  } 
+.homeJuegos{
   background-color: $naranja;
-
-}
-.juegost {
-  grid-area: textoj;
-  width: 100%;
-  background-color: $naranja;
-  .boton {
-    color: $naranja;
-    border-color: $naranjaclaro;
+  display: flex;
+  .circuloSecciones{
+    background-color: $naranjaclaro;
+    background-image: url(./img/juego-completo.png);
+    background-size: 300px 300px;
   }
-  .boton:hover {
-    background-color: $naranja;
-    color: $colortxt;
-    border-color: $naranjaclaro;
+  .homeTitulos{
+    margin-left: 10%;
   }
-  .juegostexto {
-    margin-top: 30%;
+  .descripcion{
+    margin-left: 10%;
     margin-right: 20%;
   }
+  .btnDescripcion{
+    margin-left: 10%;
+    border-color: $naranjaclaro;
+    color: $naranja;
+  }
+  .btnDescripcion:hover{
+    color: $colortxt;
+    background-color: transparent;
+  }
 }
-.manifiesto {
-  grid-area: manifesto;
-  width: 100%;
-  background-color: $azul;
-  h3 {
-    @include fuentes($fuente1, 40px);
-    color: $colortxt;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 5%;
+.homeManifiesto{
+  @include basicos (auto, 100%, $azul);
+  padding-top: 6%;
+  padding-bottom: 6%;
+  .manifiesto{
+    @include basicos (auto, 80%, $colortxt);
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $azulclaro;
   }
-  h2 {
-    @include fuentes($fuente1, 30px);
-    color: $colortxt;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 0%;
+  .logoManifiesto{
+    padding-top: 5%;
+    width: 150px;
   }
-  p {
-    @include fuentes($fuente1, 20px);
-    width: 60%;
-    color: $colortxt;
-    line-height: 30px;
-    text-align: center;
-    margin: 3% 20% 1% 20%;
-  }
-  .boton {
-    width: 10%;
-    background-color: $azul;
-    color: $colortxt;
-    border-color: $colortxt;
-    margin: 2% 45% 5% 45%;
-  }
-  .boton:hover {
-    background-color: $colortxt;
+  .tituloManifiesto{
+    @include fuentes($fuente1, 35px);
     color: $azul;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .subtituloManifiesto{
+    @include fuentes($fuente1, 20px);
+    text-align: center;
+    font-weight: bold;
+    color: $azul;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .textoMobiliario{
+    @include fuentes($fuente1, 16px);
+    text-align: center;
+    color: $azul;
+    margin: 10px 20% 5px 20%;
+  }
+  .btnManifiesto{
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    color: $azul;
+    margin-bottom: 5%;
+  }
+  .btnManifiesto:hover{
+    background-color: $azulclaro;
+    color: $colortxt;
+    border-color: $azul;
   }
 }
-.footer {
-  width: 100%;
-  background-color: $azul;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.logoPages{
+  width: 20%;
   padding-top: 5%;
-  #footer1 {
-    width: 33%;
-    .titulof1 {
-      @include fuentes($fuente1, 25px);
-      color: $colortxt;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-left: 25%;
-      margin-right: 0;
-      text-align: center;
-    }
-    .footer ::placeholder {
-      color: $colortxt;
-      font-family: $fuente1;
-      padding-left: 5%;
-    }
-    #suscripcion {
-      @include tamaños(28px, 70%, transparent);
-      border-radius: 5px;
-      margin-top: 3%;
-      margin-left: 36%;
-      border: 1px solid $colortxt;
-    }
-    #submitbtn {
-      @include tamaños(25px, 20%, transparent);
-      margin-top: 3%;
-      margin-left: 36%;
-      border-radius: 5px;
-      border: 1px solid $colortxt;
-      color: $colortxt;
-      cursor: pointer;
+  padding-bottom: 2%;
+  display: block;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3%;
+  padding-bottom: 5%;
+  padding-top: 3%;
+  div{
+    height: 80px;
+    width: 20%;
+    margin-right: 2%;
+    background-color: $naranja;
+    text-transform: $colortxt;
+    text-align: center;
+    color: $colortxt;
+    font-family: $fuente1;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    animation: 2s infinite jumpy;
+  }
+  div:nth-child(even){
+    animation-delay: 1s
+  }
+  @keyframes jumpy {
+    50% {height: 60px; background: $amarillo}
+  }
+}
+.pageDescripcion{
+  @include fuentes($fuente1, 18px);
+  color: $colortxt;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 0;
+  padding-bottom: 5%;
+  text-align: center;
+}
+.productos{
+  background-color: $azulclaro;
+  padding-bottom: 5%;
+}
+.card{
+  border: 5px double $azul;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.card-title{
+  font-family: $fuente1;
+  text-transform: uppercase;
+  color: $azul;
+  font-weight: bold;
+}
+.card-text{
+  font-family: $fuente1;
+  color: $azul;
+}
+.btnPages{
+  background-color: $azul;
+  color: $colortxt;
+  border: none;
+}
+.btnPages:hover{
+  background-color: $azul;
+  color: $colortxt;
+  border: none;
+}
+.pageMobiliario{
+  @include basicos (auto, 100%, $azulclaro);
+}
+.pageJuegos{
+  @include basicos (auto, 100%, $azulclaro);
+}
+.contacto{
+  background-color: $amarilloclaro;
+}
+.pageContacto{
+  background-color: $amarilloclaro;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  display: flex;
+  .datosContacto{
+    width: 50%;
+  }
+  .textoContacto{
+    font-family: $fuente1;
+    color: $azul;
+    padding-left: 20%;
+  }
+  iframe{
+    padding-bottom: 3%;
+    width: 80%;
+  }
+  .formularioContacto{
+    width: 50%;
+  }
+  ::placeholder{
+    color: $azul;
+    font-family: $fuente1;
+    padding-left: 5px;
+  }
+  .estiloform{
+    border: 1px solid $azul;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 10px;
+  }
+  #mensaje{
+    height: 150px;
+  }
+  #btnformulario{
+    color: $azul;
+    background-color: $colortxt;
+    font-family: $fuente1;
+    font-weight: bold;
+  }
+  #btnformulario:hover{
+    background-color: $amarilloclaro;
+  }
+}
+.nosotros{
+  background-color: $amarilloclaro;
+}
+.pageNosotros{
+  background-color: $amarilloclaro;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  .nosotrosImagen{
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid $celeste;
+    animation-name: pulso;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes pulso {
+    from{ box-shadow: 0 0 1px $azul;}
+    50%{ box-shadow: 0 0 18px $celeste}
+    to{ box-shadow: 0 0 9px $azulclaro;}
+    
+  }
+  .nosotrosTexto{
+    font-family: $fuente1;
+    text-align: justify;
+    color: $azul;
+    padding-top: 5%;
+    width: 50%;
+    margin-left: 25%;
+    text-shadow: 3px 3px 3px $colortxt;
+  }
+  .nosotrosKimkelen{
+    width: 100%;
+    margin-top: 5%;
+    .nosotrosImagen{
+      margin-left: auto;
+      margin-right: auto;
+      background-image: url(./img/nosotros-kimkelen.png);
+      background-position: center;
+      background-size: cover ;
     }
   }
-  #footer2 {
+  .nosotrosMelina{
     width: 100%;
-    text-align: center;
-    margin-bottom: 50px;
-    ul {
-      list-style: none;
-      a {
-        @include fuentes($fuente1, 25px);
-        color: $colortxt;
-        font-weight: bold;
+    .nosotrosImagen{
+      margin-left: auto;
+      margin-right: auto;
+      background-image: url(./img/nosotros-melina.png);
+      background-position: center;
+      background-size: cover ;
+    }
+  }
+}
+
+
+// media queries
+@media screen and (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+        .footerUno{
+            width: 100%;
+        }
+        .footerDos{
+            width: 100%;
+        }
+        .footerTres{
+            width: 100%;
+            padding-bottom: 30px;
+        }
+    } 
+    .homeProductos{
+      flex-wrap: wrap;
+      .circulos{
+        margin-top: 20px;
+      }
+    }  
+    .logoHome{
+      width: 80%;
+      height: 80%;
+    }
+    .loader{
+      div{
+        height: 40px;
+        font-size: 30px;
+      }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+.homeProductos{
+  padding-top: 10%;
+  .circulos{
+    height: 130px;
+    width: 150px;
+  }
+  .circ-azul {
+    background-size: 120px 120px;
+  }
+  .circ-rojo {
+    background-size: 150px 150px;
+  }
+  .circ-verde {
+    background-size: 115px 115px;
+  }
+  .circ-naranja {
+    background-size: 125px 125px;
+  }
+}
+.homeTitulos{
+  margin: 0;
+  text-align: center;
+}
+.descripcion{
+  margin: 0 15% 0 15%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.btnDescripcion{
+  margin-bottom: 10%;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.homeJuegos{
+  .homeTitulos{
+  margin: 0;
+  text-align: center;
+}
+.descripcion{
+  margin: 0 15% 0 15%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.btnDescripcion{
+  margin-bottom: 10%;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+}
+.hmTexto{
+  width: 100%;
+}
+.hmImagen{
+  width: 100%;
+}
+.homeMobiliario{
+  flex-direction: column-reverse;
+}
+.homeJuegos{
+  flex-direction: column;
+}
+.pageNosotros{
+  .nosotrosMelina{
+    .nosotrosImagen{
+      margin-left: 50%;
+      transform: translate(-50%);
+    }
+    .nosotrosTexto{
+      text-align: center;
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 10%;
+    }
+  }
+  .nosotrosKimkelen{
+    .nosotrosImagen{
+      margin-left: 50%;
+      transform: translate(-50%);
+    }
+    .nosotrosTexto{
+      text-align: center;
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 10%;
+    }
+  }
+  .nosotrosImagen{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .nosotrosTexto{
+    margin: 0;
+  }
+}
+}
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .circuloSecciones{
+    height: 260px;
+    width: 260px;
+    border-radius: 260px;
+  }
+  .homeTitulos{
+    font-size: 40px;
+  }
+  .descripcion{
+    font-size: 16px;
+  }
+  .homeMobiliario{
+    .hmImagen{
+      .circuloSecciones{
+        background-size: 210px 210px;
       }
     }
   }
-  #footer3 {
-    width: 33%;
-    .titulof3 {
-      @include fuentes($fuente1, 25px);
-      color: $colortxt;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-right: 25%;
-    }
-    .redes i {
-      font-size: 36px;
-      color: $colortxt;
-      text-align: center;
-      padding-left: 7%;
-      padding-top: 3%;
-    }
-    .copyp {
-      @include fuentes($fuente1, 16px);
-      color: $colortxt;
-      padding-top: 3%;
+  .homeJuegos{
+    .circuloSecciones{
+      background-size: 230px 230px;
     }
   }
-}
-.titulopages {
-  @include fuentes($fuente1, 70px);
-  color: $colortxt;
-  text-transform: uppercase;
-  text-align: center;
-}
-.descripcionpages {
-  @include fuentes($fuente1, 20px);
-  color: $colortxt;
-  text-align: justify;
-  width: 60%;
-  margin: 3% 20% 0% 20%;
-  padding-bottom: 5%;
-}
-.logopages {
-  width: 15%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-top: 0%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-}
-.card-title {
-  font-family: $fuente1;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.page-mobiliario {
-  background-color: $azulclaro;
-  .titulopages {
-    text-shadow: 3px 3px 3px $azul;
+  .pageContacto{
+    flex-direction: column-reverse;
+    .datosContacto{
+      width: 100%;
+      .textoContacto{
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+    .formularioContacto{
+      width: 100%;
+      margin-bottom: 10%;
+    }
   }
-}
-.muebles {
-  background-color: $azulclaro;
-  padding-bottom: 5%;
-  .card-text {
-    font-family: $fuente1;
-    color: $azul;
+  .estiloform{
+    width: 80%;
+    margin-left: 10%;
   }
-  .card-title {
-    color: $azul;
+  iframe{
+    padding-bottom: 3%;
+    width: 80%;
   }
-  .btn {
-    background-color: $azul;
-    border: none;
+  #iframeMapa{
+    margin-left: 50%;
+    transform: translate(-50%);
   }
-  .card {
-    border: 3px solid $azul;
-  }
-}
-.page-juegos {
-  background-color: $rojo;
-  .titulopages {
-    text-shadow: 3px 3px 3px $naranja;
-  }
-}
-.rompecabezas {
-  background-color: $rojo;
-  padding-bottom: 5%;
-  .card-text {
-    font-family: $fuente1;
-    color: $rojo;
-  }
-  .card-title {
-    color: $rojo;
-  }
-  .btn {
-    background-color: $naranja;
-    border: 1px solid $naranja;
-  }
-  .card {
-    border: 3px solid $naranja;
-  }
-}
-.page-nosotros {
-  background-color: $amarilloclaro;
-  .titulopages {
-    text-shadow: 3px 3px 3px $amarillo;
-  }
-}
-.nospage{
-  background-color: $amarilloclaro;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .card{
-    border: $naranja double;
-  }
-  .card-text{
-    font-family: $fuente1;
-    color: $naranja;
-  }
-  .card-title{
-    font-family: $fuente1;
-    color: $naranja;
+  
+
   }
 
-}
-.contacto {
-  @include tamaños(750px, 100%, $amarilloclaro);
-  margin: 0px;
-  padding: 0px;
-  .logog {
-    margin-top: 0;
-  }
-  h2 {
-    @include fuentes($fuente1, 40px);
-    text-transform: uppercase;
-    color: $colortxt;
-    padding: 15px;
-    text-align: center;
-    text-shadow: 3px 3px 3px $naranja;
-  }
-}
-.formulario {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
-  .estiloform {
-    @include fuentes($fuente1, 16px);
-    border: 3px solid $naranja;
-    border-radius: 5px;
-    margin: 10px;
-  }
-  .estiloform:hover {
-    transform: scale(1.05);
-    transition: all 0.6s;
-  }
-  #mensaje {
-    height: 300px;
-    width: 60%;
-  }
-  #nombre {
-    height: 40px;
-    width: 29%;
-  }
-  #email {
-    height: 40px;
-    width: 30%;
-  }
-  #btnformulario {
-    @include tamaños(40px, 60%, $naranja);
-    color: $colortxt;
-    border: 2px solid $colortxt;
-    cursor: pointer;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .home {
-    display: grid;
-    grid-template-areas:
-      "main"
-      "main"
-      "textom"
-      "imagenm"
-      "textoj"
-      "imagenj"
-      "manifesto";
-  }
-  .presentacion {
-    grid-area: main;
-  }
-  .homeProductos {
-    flex-wrap: wrap;
-  }
-  .circuloproductos {
-    width: 180px;
-    height: 160px;
-    margin: 5px;
-    margin-top: 1%;
-    padding-top: 0;
-  }
-  #uno {
-    background-size: 150px 150px;
-  }
-  #dos {
-    background-size: 190px 190px;
-  }
-  #tres {
-    background-size: 140px 140px;
-  }
-  #cuatro {
-    background-size: 170px 170px;
-  }
-  .titulosmj {
-    font-size: 50px;
-    text-align: center;
-  }
-  .descripcion {
-    width: 100%;
-    font-size: 20px;
-    text-align: center;
-    padding: 10%;
-    padding-bottom: 5%;
-  }
-  .mobiliariotexto {
-    grid-area: textom;
-    margin: 5%;
-  }
-  .mobiliarioimg {
-    grid-area: imagenm;
-  }
-  .boton {
-    margin-top: 0%;
-    margin-left: 38%;
-  }
-  .juegostexto {
-    grid-area: textoj;
-    width: 100%;
-  }
-  .juegosimg {
-    grid-area: imagenj;
-  }
-  .manifiesto {
-    grid-area: manifesto;
-  }
-  .titulom3 {
-    font-size: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .titulom2 {
-    font-size: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .manifiestotexto {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .manifiesto .boton {
-    width: 25%;
-    margin-left: 38%;
-    margin-bottom: 10%;
-  }
-  .descripcionpages {
-    font-size: 16px;
-  }
-  .footer {
-    width: 100%;
-    padding: 30px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #footer1 {
-    width: 100%;
-    margin-top: 10%;
-  }
-  #footer2 {
-    width: 100%;
-  }
-  #footer3 {
-    width: 100%;
-  }
-  .titulof1 {
-    font-size: 18px;
-    margin: 0%;
-    text-align: center;
-  }
-  #suscripcion {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  #submitbtn {
-    width: 20%;
-    margin-left: 40%;
-    margin-right: 40%;
-  }
-  #footer2 {
-    margin-top: 10%;
-  }
-  #footer2 a {
-    font-size: 18px;
-  }
-  .titulof3 {
-    font-size: 18px;
-    margin-left: 42%;
-    margin-right: 42%;
-    margin-bottom: 3%;
-  }
-  .redes i {
-    font-size: 25px;
-    padding: 0;
-    letter-spacing: 8px;
-    text-align: center;
-  }
-  #fb {
-    margin-left: 45%;
-  }
-  .copyp {
-    font-size: 16px;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1326px) {
-  .titulopages {
-    font-size: 40px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .titulopages {
-    font-size: 20px;
-  }
-}

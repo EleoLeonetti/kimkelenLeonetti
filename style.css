@@ -1,12 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Quicksand:wght@300;400;600;700&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
 }
 
 .navbar {
@@ -14,720 +10,777 @@ a {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
 }
-.navbar .btn {
+.navbar .navbar-toggler {
+  color: #f9fbf1;
+}
+.navbar .btnModal {
   background-color: #106567;
   border: #f9fbf1 solid 1px;
+  box-shadow: none;
 }
-.navbar .btn:hover {
+.navbar .btnModal:hover {
   background-color: #14a095;
-}
-
-.modal {
-  font-family: "Quicksand", sans-serif;
-  color: #106567;
-}
-.modal .btnmodal {
-  font-family: "Quicksand", sans-serif;
-  background-color: #106567;
-  border: none;
-}
-.modal .btnmodal:hover {
-  background-color: #14a095;
-}
-.modal .cardmodal {
-  border: #106567 solid 1px;
-}
-
-.logog {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-  justify-content: center;
-}
-
-.home {
-  display: grid;
-  grid-template-areas: "main main" "textom imagenm" "imagenj textoj" "manifesto manifesto";
-}
-.home .presentacion {
-  grid-area: main;
-  height: auto;
-  width: 100%;
-  background-color: #fbdea7;
-}
-.home .presentacion p {
-  color: #106567;
-  font-family: "Quicksand", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  text-align: center;
-}
-.home .homeProductos {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: flex-end;
-  padding-bottom: 6%;
-}
-.home .homeProductos .circuloproductos {
-  height: 230px;
-  width: 250px;
-  background-color: #f7b333;
-  border-radius: 80% 70% 60% 60%/80% 70% 60% 60%;
-  margin: 20px;
-  margin-top: 100px;
-}
-.home .homeProductos .circ-azul {
-  background-image: url(./images/ballena.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
-}
-.home .homeProductos .circ-rojo {
-  background-image: url(./images/taruca.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
-}
-.home .homeProductos .circ-verde {
-  background-image: url(./images/yurumi.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
-}
-.home .homeProductos .circ-naranja {
-  background-image: url(./images/aguara.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
-}
-.home .homeProductos .circ-azul {
-  border: #106567 solid 3px;
-  background-size: 190px 190px;
-  animation-name: rebotar1;
-}
-@keyframes rebotar1 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-50px);
-    box-shadow: 0px 2px 2px 2px #106567;
-  }
-  51% {
-    box-shadow: 0px 2px 2px 2px #106567;
-  }
-}
-.home .homeProductos .circ-rojo {
-  border: #e75217 solid 3px;
-  background-size: 250px 250px;
-  animation-name: rebotar2;
-}
-@keyframes rebotar2 {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    transform: translateY(-70px);
-    box-shadow: 0px 2px 2px 2px #e75217;
-  }
-  41% {
-    box-shadow: 0px 2px 2px 2px #e75217;
-  }
-}
-.home .homeProductos .circ-verde {
-  border: #0d8a2e solid 3px;
-  background-size: 200px 200px;
-  animation-name: rebotar3;
-}
-@keyframes rebotar3 {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    transform: translateY(-60px);
-    box-shadow: 0px 2px 2px 2px #0d8a2e;
-  }
-  41% {
-    box-shadow: 0px 2px 2px 2px #0d8a2e;
-  }
-}
-.home .homeProductos .circ-naranja {
-  border: #e75217 solid 3px;
-  background-size: 230px 230px;
-  animation-name: rebotar4;
-}
-@keyframes rebotar4 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-50px);
-    box-shadow: 0px 2px 2px 2px #e75217;
-  }
-  51% {
-    box-shadow: 0px 2px 2px 2px #e75217;
-  }
-}
-
-.circulo, .circulo--juego, .circulo--mobiliario {
-  height: 350px;
-  width: 350px;
-  border-radius: 350px;
-  margin: 20% auto 20% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.circulo--mobiliario {
-  background-color: #81efe6;
-  background-image: url(./images/ballena.png);
-  background-size: 300px 300px;
-}
-
-.circulo--juego {
-  background-color: #f5b59c;
-  background-image: url(./images/rompecabezas.png);
-  background-size: 350px 350px;
-}
-
-.titulosmj {
-  font-family: "Quicksand", sans-serif;
-  font-size: 70px;
-  color: #f9fbf1;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.descripcion {
-  width: 550px;
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-  color: #f9fbf1;
-  line-height: 30px;
-}
-
-.boton {
-  height: 40px;
-  width: 130px;
-  background-color: #f9fbf1;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
-  padding: 5px 10px;
-  border: solid 2.5px;
-  border-radius: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.mobiliario {
-  grid-area: textom;
-  width: 100%;
-  background-color: #14a095;
-}
-.mobiliario .mobiliariotexto {
-  margin: 30% 20%;
-}
-.mobiliario .boton {
-  color: #14a095;
-  border-color: #81efe6;
-}
-.mobiliario .boton:hover {
-  background-color: #14a095;
-  color: #f9fbf1;
-}
-
-.mobiliarioimg {
-  grid-area: imagenm;
-  width: 100%;
-  background-color: #14a095;
-}
-
-.juegosimg {
-  grid-area: imagenj;
-  width: 100%;
-  background-color: #e75217;
-}
-
-.juegost {
-  grid-area: textoj;
-  width: 100%;
-  background-color: #e75217;
-}
-.juegost .boton {
-  color: #e75217;
-  border-color: #f5b59c;
-}
-.juegost .boton:hover {
-  background-color: #e75217;
-  color: #f9fbf1;
-  border-color: #f5b59c;
-}
-.juegost .juegostexto {
-  margin-top: 30%;
-  margin-right: 20%;
-}
-
-.manifiesto {
-  grid-area: manifesto;
-  width: 100%;
-  background-color: #106567;
-}
-.manifiesto h3 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 40px;
-  color: #f9fbf1;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 5%;
-}
-.manifiesto h2 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 30px;
-  color: #f9fbf1;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 2%;
-  margin-bottom: 0%;
-}
-.manifiesto p {
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-  width: 60%;
-  color: #f9fbf1;
-  line-height: 30px;
-  text-align: center;
-  margin: 3% 20% 1% 20%;
-}
-.manifiesto .boton {
-  width: 10%;
-  background-color: #106567;
-  color: #f9fbf1;
-  border-color: #f9fbf1;
-  margin: 2% 45% 5% 45%;
-}
-.manifiesto .boton:hover {
-  background-color: #f9fbf1;
-  color: #106567;
 }
 
 .footer {
   width: 100%;
   background-color: #106567;
+  padding-bottom: 5%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5%;
 }
-.footer #footer1 {
-  width: 33%;
-}
-.footer #footer1 .titulof1 {
+
+.hfooter {
   font-family: "Quicksand", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: #f9fbf1;
   text-transform: uppercase;
   font-weight: bold;
-  margin-left: 25%;
-  margin-right: 0;
+  padding-top: 20px;
+}
+
+.footerUno {
+  width: 33.33%;
   text-align: center;
 }
-.footer #footer1 .footer ::placeholder {
+.footerUno .redes {
+  color: #f9fbf1;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+.footerDos {
+  width: 33.33%;
+  text-align: center;
+}
+.footerDos ul {
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 0;
+}
+.footerDos a {
+  text-decoration: none;
+  color: #f9fbf1;
+  text-transform: capitalize;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footerDos p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  color: #f9fbf1;
+}
+
+.footerTres {
+  width: 33.33%;
+  text-align: center;
+  color: #f9fbf1;
+}
+.footerTres ::placeholder {
   color: #f9fbf1;
   font-family: "Quicksand", sans-serif;
   padding-left: 5%;
 }
-.footer #footer1 #suscripcion {
-  height: 28px;
-  width: 70%;
+.footerTres #suscripcion {
   background-color: transparent;
   border-radius: 5px;
-  margin-top: 3%;
-  margin-left: 36%;
   border: 1px solid #f9fbf1;
 }
-.footer #footer1 #submitbtn {
-  height: 25px;
-  width: 20%;
+.footerTres .send {
   background-color: transparent;
-  margin-top: 3%;
-  margin-left: 36%;
-  border-radius: 5px;
-  border: 1px solid #f9fbf1;
   color: #f9fbf1;
-  cursor: pointer;
+  border: none;
+  padding-left: 5px;
 }
-.footer #footer2 {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.footer #footer2 ul {
-  list-style: none;
-}
-.footer #footer2 ul a {
-  font-family: "Quicksand", sans-serif;
-  font-size: 25px;
-  color: #f9fbf1;
-  font-weight: bold;
-}
-.footer #footer3 {
-  width: 33%;
-}
-.footer #footer3 .titulof3 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 25px;
-  color: #f9fbf1;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-right: 25%;
-}
-.footer #footer3 .redes i {
-  font-size: 36px;
-  color: #f9fbf1;
-  text-align: center;
-  padding-left: 7%;
-  padding-top: 3%;
-}
-.footer #footer3 .copyp {
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
-  color: #f9fbf1;
-  padding-top: 3%;
+.footerTres .send:hover {
+  color: #14a095;
 }
 
-.titulopages {
-  font-family: "Quicksand", sans-serif;
-  font-size: 70px;
-  color: #f9fbf1;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.descripcionpages {
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-  color: #f9fbf1;
-  text-align: justify;
-  width: 60%;
-  margin: 3% 20% 0% 20%;
-  padding-bottom: 5%;
-}
-
-.logopages {
-  width: 15%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-top: 0%;
+.logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
+}
+
+#exampleModalLabel {
+  font-family: "Quicksand", sans-serif;
+  color: #106567;
+}
+
+.btnmodal {
+  font-family: "Quicksand", sans-serif;
+  background-color: #106567;
+  border: none;
+}
+
+.btnmodal:hover {
+  background-color: #14a095;
+}
+
+.home {
+  height: auto;
+  width: 100%;
+  background-color: #fbdea7;
+}
+.home .slogan {
+  font-family: "Quicksand", sans-serif;
+  color: #106567;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.homeProductos {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.homeProductos .circulos {
+  height: 200px;
+  width: 220px;
+  background-color: #f7b333;
+  border-radius: 80% 70% 60% 60%/80% 70% 60% 60%;
+}
+.homeProductos .circ-azul {
+  background-image: url(./img/ballena.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.homeProductos .circ-rojo {
+  background-image: url(./img/taruca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.homeProductos .circ-verde {
+  background-image: url(./img/yurumi.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.homeProductos .circ-naranja {
+  background-image: url(./img/aguara.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+.homeProductos .circ-azul {
+  border: #106567 solid 2px;
+  background-size: 180px 180px;
+  animation-name: rebotar1;
+}
+@keyframes rebotar1 {
+  20% {
+    transform: translateY(-60px);
+    box-shadow: 0px 1px 1px 1px #106567;
+  }
+  21% {
+    box-shadow: 0px 1px 1px 1px #106567;
+  }
+  30% {
+    transform: translateY(-60px);
+    box-shadow: 0px 1px 1px 1px #106567;
+  }
+  31% {
+    box-shadow: 0px 1px 1px 1px #106567;
+  }
+}
+.homeProductos .circ-rojo {
+  border: #e75217 solid 2px;
+  background-size: 230px 230px;
+  animation-name: rebotar2;
+}
+@keyframes rebotar2 {
+  10% {
+    transform: translateY(-50px);
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+  11% {
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+  20% {
+    transform: translateY(-50px);
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+  21% {
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+}
+.homeProductos .circ-verde {
+  border: #0d8a2e solid 2px;
+  background-size: 180px 180px;
+  animation-name: rebotar3;
+}
+@keyframes rebotar3 {
+  20% {
+    transform: translateY(-50px);
+    box-shadow: 0px 1px 1px 1px #0d8a2e;
+  }
+  21% {
+    box-shadow: 0px 1px 1px 1px #0d8a2e;
+  }
+  30% {
+    transform: translateY(-50px);
+    box-shadow: 0px 1px 1px 1px #0d8a2e;
+  }
+  31% {
+    box-shadow: 0px 1px 1px 1px #0d8a2e;
+  }
+}
+.homeProductos .circ-naranja {
+  border: #e75217 solid 3px;
+  background-size: 200px 200px;
+  animation-name: rebotar4;
+}
+@keyframes rebotar4 {
+  10% {
+    transform: translateY(-60px);
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+  11% {
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+  20% {
+    transform: translateY(-60px);
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+  21% {
+    box-shadow: 0px 1px 1px 1px #e75217;
+  }
+}
+
+.circuloSecciones {
+  height: 350px;
+  width: 350px;
+  border-radius: 350px;
+  margin: 10% auto 10% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hmImagen {
+  width: 50%;
+}
+
+.hmTexto {
+  width: 50%;
+}
+
+.homeTitulos {
+  font-family: "Quicksand", sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f9fbf1;
+  margin-top: 15%;
+  margin-left: 20%;
+}
+
+.descripcion {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  color: #f9fbf1;
+  margin-left: 20%;
+}
+
+.btnDescripcion {
+  height: 40px;
+  width: 130px;
+  background-color: #f9fbf1;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: 2px solid;
+  margin-left: 20%;
+}
+
+.homeMobiliario {
+  background-color: #14a095;
+  display: flex;
+}
+.homeMobiliario .btnDescripcion {
+  border-color: #81efe6;
+  color: #14a095;
+}
+.homeMobiliario .btnDescripcion:hover {
+  background-color: #14a095;
+  color: #f9fbf1;
+}
+
+.circuloSecciones {
+  background-color: #81efe6;
+  background-image: url(./img/ballena.png);
+  background-size: 300px 300px;
+}
+
+.homeJuegos {
+  background-color: #e75217;
+  display: flex;
+}
+.homeJuegos .circuloSecciones {
+  background-color: #f5b59c;
+  background-image: url(./img/juego-completo.png);
+  background-size: 300px 300px;
+}
+.homeJuegos .homeTitulos {
+  margin-left: 10%;
+}
+.homeJuegos .descripcion {
+  margin-left: 10%;
+  margin-right: 20%;
+}
+.homeJuegos .btnDescripcion {
+  margin-left: 10%;
+  border-color: #f5b59c;
+  color: #e75217;
+}
+.homeJuegos .btnDescripcion:hover {
+  color: #f9fbf1;
+  background-color: transparent;
+}
+
+.homeManifiesto {
+  height: auto;
+  width: 100%;
+  background-color: #106567;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+.homeManifiesto .manifiesto {
+  height: auto;
+  width: 80%;
+  background-color: #f9fbf1;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #14a095;
+}
+.homeManifiesto .logoManifiesto {
+  padding-top: 5%;
+  width: 150px;
+}
+.homeManifiesto .tituloManifiesto {
+  font-family: "Quicksand", sans-serif;
+  font-size: 35px;
+  color: #106567;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+}
+.homeManifiesto .subtituloManifiesto {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #106567;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.homeManifiesto .textoMobiliario {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #106567;
+  margin: 10px 20% 5px 20%;
+}
+.homeManifiesto .btnManifiesto {
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  color: #106567;
+  margin-bottom: 5%;
+}
+.homeManifiesto .btnManifiesto:hover {
+  background-color: #14a095;
+  color: #f9fbf1;
+  border-color: #106567;
+}
+
+.logoPages {
+  width: 20%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  display: block;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3%;
+  padding-bottom: 5%;
+  padding-top: 3%;
+}
+.loader div {
+  height: 80px;
+  width: 20%;
+  margin-right: 2%;
+  background-color: #e75217;
+  text-transform: #f9fbf1;
+  text-align: center;
+  color: #f9fbf1;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+  animation: 2s infinite jumpy;
+}
+.loader div:nth-child(even) {
+  animation-delay: 1s;
+}
+@keyframes jumpy {
+  50% {
+    height: 60px;
+    background: #f7b333;
+  }
+}
+
+.pageDescripcion {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  color: #f9fbf1;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 0;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.productos {
+  background-color: #14a095;
+  padding-bottom: 5%;
+}
+
+.card {
+  border: 5px double #106567;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .card-title {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
+  color: #106567;
   font-weight: bold;
 }
 
-.page-mobiliario {
-  background-color: #14a095;
-}
-.page-mobiliario .titulopages {
-  text-shadow: 3px 3px 3px #106567;
-}
-
-.muebles {
-  background-color: #14a095;
-  padding-bottom: 5%;
-}
-.muebles .card-text {
+.card-text {
   font-family: "Quicksand", sans-serif;
   color: #106567;
 }
-.muebles .card-title {
-  color: #106567;
-}
-.muebles .btn {
+
+.btnPages {
   background-color: #106567;
+  color: #f9fbf1;
   border: none;
 }
-.muebles .card {
-  border: 3px solid #106567;
+
+.btnPages:hover {
+  background-color: #106567;
+  color: #f9fbf1;
+  border: none;
 }
 
-.page-juegos {
-  background-color: #8f2d17;
-}
-.page-juegos .titulopages {
-  text-shadow: 3px 3px 3px #e75217;
-}
-
-.rompecabezas {
-  background-color: #8f2d17;
-  padding-bottom: 5%;
-}
-.rompecabezas .card-text {
-  font-family: "Quicksand", sans-serif;
-  color: #8f2d17;
-}
-.rompecabezas .card-title {
-  color: #8f2d17;
-}
-.rompecabezas .btn {
-  background-color: #e75217;
-  border: 1px solid #e75217;
-}
-.rompecabezas .card {
-  border: 3px solid #e75217;
+.pageMobiliario {
+  height: auto;
+  width: 100%;
+  background-color: #14a095;
 }
 
-.page-nosotros {
-  background-color: #fbdea7;
-}
-.page-nosotros .titulopages {
-  text-shadow: 3px 3px 3px #f7b333;
-}
-
-.nospage {
-  background-color: #fbdea7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.nospage .card {
-  border: #e75217 double;
-}
-.nospage .card-text {
-  font-family: "Quicksand", sans-serif;
-  color: #e75217;
-}
-.nospage .card-title {
-  font-family: "Quicksand", sans-serif;
-  color: #e75217;
+.pageJuegos {
+  height: auto;
+  width: 100%;
+  background-color: #14a095;
 }
 
 .contacto {
-  height: 750px;
-  width: 100%;
   background-color: #fbdea7;
-  margin: 0px;
-  padding: 0px;
-}
-.contacto .logog {
-  margin-top: 0;
-}
-.contacto h2 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 40px;
-  text-transform: uppercase;
-  color: #f9fbf1;
-  padding: 15px;
-  text-align: center;
-  text-shadow: 3px 3px 3px #e75217;
 }
 
-.formulario {
+.pageContacto {
+  background-color: #fbdea7;
+  padding-top: 5%;
+  padding-bottom: 10%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
 }
-.formulario .estiloform {
+.pageContacto .datosContacto {
+  width: 50%;
+}
+.pageContacto .textoContacto {
   font-family: "Quicksand", sans-serif;
-  font-size: 16px;
-  border: 3px solid #e75217;
+  color: #106567;
+  padding-left: 20%;
+}
+.pageContacto iframe {
+  padding-bottom: 3%;
+  width: 80%;
+}
+.pageContacto .formularioContacto {
+  width: 50%;
+}
+.pageContacto ::placeholder {
+  color: #106567;
+  font-family: "Quicksand", sans-serif;
+  padding-left: 5px;
+}
+.pageContacto .estiloform {
+  border: 1px solid #106567;
   border-radius: 5px;
-  margin: 10px;
+  width: 80%;
+  margin-top: 10px;
 }
-.formulario .estiloform:hover {
-  transform: scale(1.05);
-  transition: all 0.6s;
+.pageContacto #mensaje {
+  height: 150px;
 }
-.formulario #mensaje {
-  height: 300px;
-  width: 60%;
+.pageContacto #btnformulario {
+  color: #106567;
+  background-color: #f9fbf1;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
 }
-.formulario #nombre {
-  height: 40px;
-  width: 29%;
-}
-.formulario #email {
-  height: 40px;
-  width: 30%;
-}
-.formulario #btnformulario {
-  height: 40px;
-  width: 60%;
-  background-color: #e75217;
-  color: #f9fbf1;
-  border: 2px solid #f9fbf1;
-  cursor: pointer;
+.pageContacto #btnformulario:hover {
+  background-color: #fbdea7;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .home {
-    display: grid;
-    grid-template-areas: "main" "main" "textom" "imagenm" "textoj" "imagenj" "manifesto";
+.nosotros {
+  background-color: #fbdea7;
+}
+
+.pageNosotros {
+  background-color: #fbdea7;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.pageNosotros .nosotrosImagen {
+  height: 500px;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid #81efe6;
+  animation-name: pulso;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes pulso {
+  from {
+    box-shadow: 0 0 1px #106567;
   }
-  .presentacion {
-    grid-area: main;
+  50% {
+    box-shadow: 0 0 18px #81efe6;
+  }
+  to {
+    box-shadow: 0 0 9px #14a095;
+  }
+}
+.pageNosotros .nosotrosTexto {
+  font-family: "Quicksand", sans-serif;
+  text-align: justify;
+  color: #106567;
+  padding-top: 5%;
+  width: 50%;
+  margin-left: 25%;
+  text-shadow: 3px 3px 3px #f9fbf1;
+}
+.pageNosotros .nosotrosKimkelen {
+  width: 100%;
+  margin-top: 5%;
+}
+.pageNosotros .nosotrosKimkelen .nosotrosImagen {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(./img/nosotros-kimkelen.png);
+  background-position: center;
+  background-size: cover;
+}
+.pageNosotros .nosotrosMelina {
+  width: 100%;
+}
+.pageNosotros .nosotrosMelina .nosotrosImagen {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(./img/nosotros-melina.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .footerUno {
+    width: 100%;
+  }
+  .footer .footerDos {
+    width: 100%;
+  }
+  .footer .footerTres {
+    width: 100%;
+    padding-bottom: 30px;
   }
   .homeProductos {
     flex-wrap: wrap;
   }
-  .circuloproductos {
-    width: 180px;
-    height: 160px;
-    margin: 5px;
-    margin-top: 1%;
-    padding-top: 0;
+  .homeProductos .circulos {
+    margin-top: 20px;
   }
-  #uno {
+  .logoHome {
+    width: 80%;
+    height: 80%;
+  }
+  .loader div {
+    height: 40px;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  .homeProductos {
+    padding-top: 10%;
+  }
+  .homeProductos .circulos {
+    height: 130px;
+    width: 150px;
+  }
+  .homeProductos .circ-azul {
+    background-size: 120px 120px;
+  }
+  .homeProductos .circ-rojo {
     background-size: 150px 150px;
   }
-  #dos {
-    background-size: 190px 190px;
+  .homeProductos .circ-verde {
+    background-size: 115px 115px;
   }
-  #tres {
-    background-size: 140px 140px;
+  .homeProductos .circ-naranja {
+    background-size: 125px 125px;
   }
-  #cuatro {
-    background-size: 170px 170px;
-  }
-  .titulosmj {
-    font-size: 50px;
+  .homeTitulos {
+    margin: 0;
     text-align: center;
   }
   .descripcion {
-    width: 100%;
-    font-size: 20px;
+    margin: 0 15% 0 15%;
     text-align: center;
-    padding: 10%;
-    padding-bottom: 5%;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
-  .mobiliariotexto {
-    grid-area: textom;
-    margin: 5%;
+  .btnDescripcion {
+    margin-bottom: 10%;
+    margin-left: 50%;
+    transform: translate(-50%);
   }
-  .mobiliarioimg {
-    grid-area: imagenm;
+  .homeJuegos .homeTitulos {
+    margin: 0;
+    text-align: center;
   }
-  .boton {
-    margin-top: 0%;
-    margin-left: 38%;
+  .homeJuegos .descripcion {
+    margin: 0 15% 0 15%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
-  .juegostexto {
-    grid-area: textoj;
+  .homeJuegos .btnDescripcion {
+    margin-bottom: 10%;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  .hmTexto {
     width: 100%;
   }
-  .juegosimg {
-    grid-area: imagenj;
+  .hmImagen {
+    width: 100%;
   }
-  .manifiesto {
-    grid-area: manifesto;
+  .homeMobiliario {
+    flex-direction: column-reverse;
   }
-  .titulom3 {
-    font-size: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
+  .homeJuegos {
+    flex-direction: column;
   }
-  .titulom2 {
-    font-size: 20px;
+  .pageNosotros .nosotrosMelina .nosotrosImagen {
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  .pageNosotros .nosotrosMelina .nosotrosTexto {
+    text-align: center;
+    width: 80%;
     margin-left: 10%;
-    margin-right: 10%;
-  }
-  .manifiestotexto {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .manifiesto .boton {
-    width: 25%;
-    margin-left: 38%;
     margin-bottom: 10%;
   }
-  .descripcionpages {
-    font-size: 16px;
+  .pageNosotros .nosotrosKimkelen .nosotrosImagen {
+    margin-left: 50%;
+    transform: translate(-50%);
   }
-  .footer {
-    width: 100%;
-    padding: 30px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #footer1 {
-    width: 100%;
-    margin-top: 10%;
-  }
-  #footer2 {
-    width: 100%;
-  }
-  #footer3 {
-    width: 100%;
-  }
-  .titulof1 {
-    font-size: 18px;
-    margin: 0%;
+  .pageNosotros .nosotrosKimkelen .nosotrosTexto {
     text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%;
   }
-  #suscripcion {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+  .pageNosotros .nosotrosImagen {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
   }
-  #submitbtn {
-    width: 20%;
-    margin-left: 40%;
-    margin-right: 40%;
-  }
-  #footer2 {
-    margin-top: 10%;
-  }
-  #footer2 a {
-    font-size: 18px;
-  }
-  .titulof3 {
-    font-size: 18px;
-    margin-left: 42%;
-    margin-right: 42%;
-    margin-bottom: 3%;
-  }
-  .redes i {
-    font-size: 25px;
-    padding: 0;
-    letter-spacing: 8px;
-    text-align: center;
-  }
-  #fb {
-    margin-left: 45%;
-  }
-  .copyp {
-    font-size: 16px;
-    text-align: center;
+  .pageNosotros .nosotrosTexto {
+    margin: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1326px) {
-  .titulopages {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .circuloSecciones {
+    height: 260px;
+    width: 260px;
+    border-radius: 260px;
+  }
+  .homeTitulos {
     font-size: 40px;
   }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .titulopages {
-    font-size: 20px;
+  .descripcion {
+    font-size: 16px;
+  }
+  .homeMobiliario .hmImagen .circuloSecciones {
+    background-size: 210px 210px;
+  }
+  .homeJuegos .circuloSecciones {
+    background-size: 230px 230px;
+  }
+  .pageContacto {
+    flex-direction: column-reverse;
+  }
+  .pageContacto .datosContacto {
+    width: 100%;
+  }
+  .pageContacto .datosContacto .textoContacto {
+    text-align: center;
+    padding-left: 0;
+  }
+  .pageContacto .formularioContacto {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .estiloform {
+    width: 80%;
+    margin-left: 10%;
+  }
+  iframe {
+    padding-bottom: 3%;
+    width: 80%;
+  }
+  #iframeMapa {
+    margin-left: 50%;
+    transform: translate(-50%);
   }
 }
 
